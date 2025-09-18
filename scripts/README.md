@@ -1,1 +1,1 @@
-# 起動スクリプト置き場
+# scripts folder
