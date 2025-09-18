@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Model checkpoints
+*.safetensors
+*.bin
+*.pt
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
