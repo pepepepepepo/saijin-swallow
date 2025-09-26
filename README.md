@@ -1,22 +1,17 @@
+```mermaid
 flowchart LR
-  AD[Active Directory]
-  Domino[Domino サーバー]
+    subgraph OnPrem[On-Prem（社内ネットワーク）]
+        AD[Active Directory] -- TCP 389 --> Core[MNE移行管理サーバー]
+        Domino[Domino サーバー] -- TCP 1352 --> Core
+        Client[クライアント] -- TCP 139/445 --> Core
+        Core -- TCP 1433 --> DB[(NME40DB)]
+    end
 
-  subgraph CoreBlock[コアブロック（社内）]
-    direction TB
-    DB[(NME40DB)]
-    Core[MNE移行管理サーバー]
-  end
+    subgraph Cloud[Cloud]
+        ExO[Exchange Online]
+        Ex[Exchange]
+    end
 
-  Client[クライアント]
-  ExO[Exchange Online]
-  Ex[Exchange]
-
-  AD -->|TCP 389| Core
-  Domino -->|TCP 1352| Core
-  Client -->|TCP 139/445| Core
-  Core -->|TCP 1433| DB
-  Core -->|TCP 443| ExO
-  Core -->|TCP 443| Ex
-  Core -->|TCP 80/443| Ex
-
+    Core -- TCP 443 --> ExO
+    Core -- TCP 443 --> Ex
+    Core -- TCP 80/443 --> Ex
