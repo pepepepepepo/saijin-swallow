@@ -1,14 +1,29 @@
-（↑ここに上のREADME全文が入ってるので、そのままコピペしてEnter）
+flowchart LR
+  %% ノード
+  AD[Active Directory<br/>サーバー]
+  Domino[Domino<br/>サーバー]
 
-## Quickstart (最短)
+  subgraph CoreBlock[ ]
+    direction TB
+    DB[(NME40DB)]
+    Core[MNE移行管理サーバー]
+  end
 
-```bash
-# 依存関係
-pip install -r requirements.txt
+  Client[クライアント]
+  ExO[Exchange Online]
+  Ex[Exchange]
 
-# （任意）モデルDLスクリプト
-bash scripts/download_model.sh    # 実URLを入れて使う場合のみ
+  %% 接続（ポート表示）
+  AD -->|TCP 389| Core
+  Domino -->|TCP 1352| Core
+  Client -->|TCP 139/445| Core
+  Core -->|TCP 1433| DB
 
-# まずは小モデルで動作確認
-python scripts/run_inference.py
+  Core -->|TCP 443| ExO
+  Core -->|TCP 443| Ex
+  Core -->|TCP 80/443| Ex
 
+  %% 体裁少し寄せる
+  AD --- Domino
+  Client --- Core
+  ExO --- Ex
