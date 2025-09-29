@@ -1,3 +1,6 @@
+## 🔧 サーバー構成図（Mermaid記法）
+
+```mermaid
 flowchart LR
     subgraph OnPrem[On-Prem（社内ネットワーク）]
         AD[Active Directory] -- TCP 389 --> Core[NME移行管理サーバー]
@@ -12,4 +15,3 @@ flowchart LR
     Core -- TCP 443 --> ExO
     Core -- TCP 443 --> Ex
     Core -- TCP 80 & 443 --> Ex
-    
