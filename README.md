@@ -12,3 +12,4 @@ flowchart LR
     Core -- TCP 443 --> ExO
     Core -- TCP 443 --> Ex
     Core -- TCP 80 & 443 --> Ex
+![Uploading mermaid-diagram-2025-10-01-143018.png…]()
