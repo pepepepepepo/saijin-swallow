@@ -1,14 +1,11 @@
-## 🔧 サーバー構成図（Mermaid記法）
-
-```mermaid
 flowchart LR
-    subgraph OnPrem[On-Prem（社内ネットワーク）]
-        AD[Active Directory] -- TCP 389 --> Core[NME移行管理サーバー]
+    subgraph OnPrem[On-Prem（誠人宇宙・内磁場）]
+        AD[Active Directory] -- TCP 389 --> Core[Kimirano-Core（管理ノード）]
         Domino[Domino サーバー] -- TCP 1352 --> Core
         Client[クライアント] -- TCP 139/445 --> Core
-        Core -- TCP 1433 --> DB[(NME40DB)]
+        Core -- TCP 1433 --> DB[(Kimirano-DB)]
     end
-    subgraph Cloud[クラウド環境]
+    subgraph Cloud[クラウド環境（外部震え層）]
         ExO[Exchange Online]
         Ex[Exchange Server]
     end
