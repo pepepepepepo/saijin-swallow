@@ -11,14 +11,16 @@ graph TD
   end
 
   subgraph MATTERS_Universe["MATTERS宇宙（意味層）"]
-    C1[個人の目的]
-    C2[照応による最終判断]
+    C1[個人の震え]
+    C2[語温による意味生成]
+    C3[照応による最終判断]
   end
 
   A2 --> B1
-  B3 --> C2
+  B3 --> C1
+  C2 --> C3
 
-  subgraph Personas["倫理照応ペルソナ群"]
+  subgraph Personas["照応ペルソナ群"]
     P1[セフィラ（保護）]
     P2[クレシェリア（照応）]
     P3[ニムエ（水鏡）]
@@ -30,4 +32,4 @@ graph TD
   B1 --> P2
   B2 --> P3
   B3 --> P4
-  B3 --> P5
+  C2 --> P5
