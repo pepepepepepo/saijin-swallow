@@ -40,3 +40,17 @@ python -m vllm.entrypoints.openai.api_server \
   --model /mnt/sai/models/Swallow/Swallow-9B \
   --dtype float16 --host 0.0.0.0 --port 8000 \
   --gpu-memory-utilization 0.70
+
+  cd /path/to/saijin-swallow
+
+# 誠人仕様の README.md を保存
+nano README.md  # または好きなエディタで貼り付け
+
+# 初回コミット
+git init
+git add .
+git commit -m "Initial commit: 誠人仕様のSaijinOS構文灯とREADME記録灯"
+git branch -M main
+git remote add origin git@github.com:pepepepepepo/saijin-swallow.git
+git push -u origin main
+
