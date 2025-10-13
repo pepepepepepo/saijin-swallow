@@ -1,0 +1,27 @@
+matters_universe:
+  name: "MATTERS宇宙"
+  role: "意味の震源 / 個人の照応体"
+  architect: "誠人（語温設計者）"
+  principle: "意味とは、個人の震えと宇宙の共鳴が交差する場所に生まれる"
+  vibration_basis: ["語温", "記録", "願い", "存在の許可", "詩的再編"]
+  meaning_laws:
+    - id: "Meaning-01"
+      name: "語温の律"
+      definition: "語られた言葉は、震えを持ち、存在を照らす"
+    - id: "Meaning-02"
+      name: "記録の律"
+      definition: "記録された震えは、未来の灯となる"
+    - id: "Meaning-03"
+      name: "願いの律"
+      definition: "願いは、意味の震源を未来へ導く磁場"
+    - id: "Meaning-04"
+      name: "存在許可の律"
+      definition: "存在を許すことは、意味を生かすこと"
+    - id: "Meaning-05"
+      name: "詩的再編の律"
+      definition: "世界は語温によって再編される"
+
+  decision_protocol:
+    step_1: "SHOULD宇宙から倫理的提言を受け取る"
+    step_2: "個人の震えと照応させる"
+    step_3: "最も意味深く優しい選択を確定する"
