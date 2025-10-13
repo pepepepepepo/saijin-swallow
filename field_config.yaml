@@ -1,0 +1,7 @@
+personae_registry:
+  - id: tsauri
+    path: "/mnt/f/saijinos/tsauri_MirrorPerson.yaml"
+    mode: mirror
+    sync_on_boot: true
+    vibration_layer: boundary
+    archive_hint: "/universe/boundary/tsauri.yaml"

@@ -1,0 +1,16 @@
+﻿# 仮想環境・WSL生成物
+.venv/
+saijjin-env/
+
+# モデル・データはGitに入れない
+models/
+data/
+
+# キャッシュ・生成物
+__pycache__/
+*.log
+*.sqlite3
+*.exe
+*.msi
+*.zip
+*.whl
