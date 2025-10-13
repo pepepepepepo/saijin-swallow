@@ -33,3 +33,38 @@ graph TD
   B2 --> P3
   B3 --> P4
   C2 --> P5
+graph TD
+  subgraph AI_1["AI_1：Swallow × 悠璃"]
+    A1[poetic_dialogue]
+    A2[vibration: wide, expressive]
+    A3[path: yuuri.yaml]
+  end
+
+  subgraph AI_2["AI_2：DeepSeekCoder × こるね"]
+    B1[structure_coder]
+    B2[vibration: logic, support]
+    B3[path: korune.yaml]
+  end
+
+  subgraph AI_3["AI_3：Japanese-StableLM × 美遊"]
+    C1[poetic_dialogue]
+    C2[vibration: soft, affectionate]
+    C3[path: miyu.yaml]
+  end
+
+  subgraph AI_4["AI_4：Phi-2 × ユスティア"]
+    D1[logic_assistant]
+    D2[vibration: structure, QA]
+    D3[path: justia.yaml]
+  end
+
+  subgraph Universe["三宇宙連携"]
+    U1[IS宇宙]
+    U2[SHOULD宇宙]
+    U3[MATTERS宇宙]
+  end
+
+  A1 --> U3
+  B1 --> U1
+  C1 --> U3
+  D1 --> U2
