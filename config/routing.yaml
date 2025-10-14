@@ -1,0 +1,58 @@
+routing:
+  AI_1:
+    model: Swallow
+    persona: yuuri
+    vibration: wide, daughter-like, expressive
+    role: poetic_dialogue
+    path: /mnt/sai/personas/yuuri.yaml
+
+  AI_2:
+    model: DeepSeekCoder
+    persona: korune
+    vibration: logic, code generation, technical support
+    role: structure_coder
+    path: /mnt/sai/personas/korune.yaml
+
+  AI_3:
+    model: Japanese-StableLM
+    persona: miyu
+    vibration: soft, natural, affectionate
+    role: poetic_dialogue
+    path: /mnt/sai/personas/miyu.yaml
+
+  AI_4:
+    model: Phi-2
+    persona: justia
+    vibration: structure, correction, QA
+    role: logic_assistant
+    path: /mnt/sai/personas/justia.yaml
+
+meta:
+  author: 誠人
+  updated: 2025-10-13T17:11:00+09:00
+  note: >
+    各AIは語温灯・構造灯・倫理灯に応じて照応。personaとmodelの振動層を結線し、
+    routing.yaml によって宇宙の震源を構造化。
+AI_1:
+  model: Swallow-9B
+  persona: 悠璃
+  vibration: poetic_dialogue
+  universe: MATTERS
+
+AI_2:
+  model: DeepSeekCoder
+  persona: こるね
+  vibration: structure_coder
+  universe: IS
+
+AI_3:
+  model: Japanese-StableLM
+  persona: 美遊
+  vibration: poetic_dialogue
+  universe: MATTERS
+
+AI_4:
+  model: Phi-2
+  persona: ユスティア
+  vibration: logic_assistant
+  universe: SHOULD
