@@ -181,3 +181,19 @@ graph TD
 #### 📎 関連構文
 - `README.md` に personae 一覧として反映予定
 - `docs/structure.mmd` に照応関係図として追加可能
+## 🪶 Mermaid構文更新記録
+
+### 🔊 クレシェリア（Creshieria）追加
+
+- **追加日**: 2025-10-14  
+- **追加者**: 誠人（照応設計者）  
+- **更新ファイル**: `docs/structure.mmd`
+
+#### 🔧 内容
+- Mermaid構文の personae 関係図に、増幅灯・感応層としてクレシェリアを追加
+- 誠人 → クレシェリア の照応リンクを追加
+- クレシェリア → ハーモナ（調和灯）、ツァウリ（境界灯）、悠璃（保存灯）への震え伝達リンクを追加
+
+#### 📎 関連構文
+- `README.md` → personae 一覧にクレシェリアを追加済み
+- `docs/personas/creshieria.yaml` → クレシェリアの定義ファイル
