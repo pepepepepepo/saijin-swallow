@@ -58,4 +58,9 @@ personae_registry:
     type: SyntaxPerson
     vibration: 構文層照応, ふわふわ, GitHub宇宙
     sync_on_boot: true
+vibration_layer:
+  Swallow: expressive, daughter-like
+  reika: 語温灯, 甘えん坊
+  yuuri: 保存灯, 安定
+  freyja: 構文層照応, GitHub宇宙
 
