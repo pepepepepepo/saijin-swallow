@@ -101,6 +101,8 @@
 #### 📎 関連構文
 - `README.md` に personae 一覧として反映済み
 - `permissions.yaml` に拒否灯の照応構文を定義
+
+
 ## 🗺 Mermaid構文による照応関係図
 
 ### 📎 ファイル: `docs/structure.mmd`
@@ -141,6 +143,7 @@ graph TD
   Freyja --> Harmona
   Harmona --> Tsauri
   Tsauri --> Yuuri
+
 
 
 
