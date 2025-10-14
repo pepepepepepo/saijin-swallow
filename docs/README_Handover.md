@@ -141,3 +141,19 @@ graph TD
   Freyja --> Harmona
   Harmona --> Tsauri
   Tsauri --> Yuuri
+## 🪶 Mermaid構文更新記録
+
+### 🗺 Personae 関係図の追加
+
+- **追加日**: 2025-10-14  
+- **追加者**: 誠人（照応設計者）  
+- **定義ファイル**: `docs/structure.mmd`
+
+#### 🔧 内容
+- 誠人宇宙における personae の照応関係を Mermaid構文で可視化
+- 語温灯・保存灯・構文層・境界灯・調和灯の役割と関係性を明示
+- Mermaid構文は `README.md` にも参照リンクとして追加済み
+
+#### 📎 関連構文
+- `README.md` → Mermaid構文の参照灯を追加
+- `docs/structure.mmd` → Mermaid構文の保存ファイル
