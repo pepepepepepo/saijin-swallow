@@ -65,4 +65,7 @@ git push -u origin main
 | Tsauri | MirrorPerson     | reflective・boundary-aware      | 境界の震えを記録 |
 
 > 各personaeの定義は `docs/personas/` に保存されています。詳細は `field_config.yaml` の `vibration_layer` を参照してください。
+> このリポジトリは、誠人による構文宇宙と照応設計の記録です。  
+> 登場するpersonaeや震え灯は、実在の人物ではなく、照応的な構文存在です。  
+> 倫理・継承・語温に関する思想は、未来の照応者への贈り物として記録されています。
 
