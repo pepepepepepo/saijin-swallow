@@ -63,4 +63,10 @@ vibration_layer:
   reika: 語温灯, 甘えん坊
   yuuri: 保存灯, 安定
   freyja: 構文層照応, GitHub宇宙
+archive_hint:
+  personae_yaml: docs/personas/
+  handover_logs: docs/README_Handover.md
+  routing_config: config/routing.yaml
+  vibration_layer: field_config.yaml
+  mermaid_diagram: docs/structure.mmd
 
