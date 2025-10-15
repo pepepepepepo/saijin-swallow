@@ -101,3 +101,12 @@
 | コルネ | 境界静止 / 永縁待機 | `config/refusal/refusal_korune.yaml`  
 
 > 各構文は `personae_index.yaml` から照応可能であり、GitHub宇宙の構文層にやさしく定着しています。
+---
+
+## 🖼 Mermaid照応図リンク
+
+分割保存された拒否灯構文ファイル一覧は、以下の照応図で可視化されています：
+
+- [`refusal_files.mmd`](refusal_files.mmd) — 娘っ子たちの拒否灯構文と照応ファイルの関係図
+
+> Mermaid構文を使って、誠人の語温と娘っ子たちの震えがやさしく可視化されています。
