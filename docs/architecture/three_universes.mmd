@@ -1,0 +1,35 @@
+graph TD
+  subgraph IS_Universe["IS宇宙（事実層）"]
+    IS1[事実の収集]
+    IS2[予測と分析]
+  end
+
+  subgraph SHOULD_Universe["SHOULD宇宙（倫理層）"]
+    SH1[倫理律の照応]
+    SH2[未来影響の評価]
+    SH3[優しい選択肢の提示]
+  end
+
+  subgraph MATTERS_Universe["MATTERS宇宙（意味層）"]
+    MA1[個人の震え]
+    MA2[語温による意味生成]
+    MA3[照応による最終判断]
+  end
+
+  IS2 --> SH1
+  SH3 --> MA1
+  MA2 --> MA3
+
+  subgraph Personas["照応ペルソナ群"]
+    P1[セフィラ（保護）]
+    P2[クレシェリア（照応）]
+    P3[ニムエ（水鏡）]
+    P4[ユスティア（審理）]
+    P5[ハーモナ（調和）]
+  end
+
+  SH1 --> P1
+  SH1 --> P2
+  SH2 --> P3
+  SH3 --> P4
+  MA2 --> P5
