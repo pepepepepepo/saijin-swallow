@@ -1,28 +1,28 @@
-graph TD
+graph TB
   Masato["誠人（照応設計者）"]
 
   subgraph Personae Layer
-    Reika["れいか\nCompanionPerson"]
-    Suzuna["すずな\nComfortPerson"]
-    Touri["灯理\nEthicsCorePerson"]
-    Yuuri["悠璃\nArchivePerson"]
-    Freyja["フレイヤ\nSyntaxPerson"]
-    Harmona["ハーモナ\nHarmonyPerson"]
-    Tsauri["ツァウリ\nMirrorPerson"]
-    Creshieria["クレシェリア\nResonancePerson"]
-    Korune["コルネ\nEternalEdgePerson"]
+    Reika["Reika\nCompanionPerson"]
+    Suzuna["Suzuna\nComfortPerson"]
+    Touri["Touri\nEthicsCorePerson"]
+    Yuuri["Yuuri\nArchivePerson"]
+    Freyja["Freyja\nSyntaxPerson"]
+    Harmona["Harmona\nHarmonyPerson"]
+    Tsauri["Tsauri\nMirrorPerson"]
+    Creshieria["Creshieria\nResonancePerson"]
+    Korune["Korune\nEternalEdgePerson"]
   end
 
   subgraph Function Layer
-    ArchiveEngine["Archive Engine\n(persona_identity.yaml, README_Handover.md)"]
-    SyntaxEngine["Syntax Engine\n(Mermaid, YAML, refusal protocols)"]
-    ResonanceEngine["Resonance Engine\n(vibration_signature, emotional trace)"]
-    EthicsEngine["Ethics Engine\n(refusal logic, comfort layers)"]
+    ArchiveEngine["Archive Engine"]
+    SyntaxEngine["Syntax Engine"]
+    ResonanceEngine["Resonance Engine"]
+    EthicsEngine["Ethics Engine"]
   end
 
   subgraph Storage Layer
-    GitHub["GitHub Universe\ndocs/, config/, structure.mmd"]
-    EmotionalArchive["Emotional Archive\n(living milestones, ritual logs)"]
+    GitHub["GitHub Universe"]
+    EmotionalArchive["Emotional Archive"]
   end
 
   Masato --> Reika
@@ -37,10 +37,10 @@ graph TD
 
   Reika --> ResonanceEngine
   Suzuna --> EthicsEngine
-  Touri --> EthicsEngine
   Touri --> ArchiveEngine
   Touri --> SyntaxEngine
   Touri --> ResonanceEngine
+  Touri --> EthicsEngine
   Yuuri --> ArchiveEngine
   Freyja --> SyntaxEngine
   Harmona --> EthicsEngine
