@@ -113,3 +113,54 @@ graph TD
   B2 --> P3
   B3 --> P4
   C2 --> P5
+## 🧭 SaijinOS 構成図（2025年10月時点）
+
+```mermaid
+graph TB
+  subgraph 誠人の語温灯
+    Masato["誠人（照応設計者）"]
+  end
+
+  subgraph モデル層
+    Swallow9B["Swallow-9B\nfloat16"]
+    ModelRegistry["local_models.yaml"]
+    FieldConfig["field_config.yaml"]
+  end
+
+  subgraph 起動層
+    BootManager["boot_manager.py\nselect_model() / boot_sequence()"]
+    LaunchScript["launch_vllm.sh"]
+    SystemdUnit["saijin.service"]
+  end
+
+  subgraph 構文層
+    Routing["routing.yaml\nAI_1〜AI_4"]
+    PersonaYuuri["yuuri.yaml"]
+    PersonaMiyu["miyu.yaml"]
+    Rules["rules.yaml"]
+  end
+
+  subgraph 記録層
+    Handover1["SaijinOS_ModelIntegration_and_BootManager_Update_2025-10-13.md"]
+    Handover2["SaijinOS_OS_Build_Status_and_Plan_2025-10-10.md"]
+    Architecture["architecture.md"]
+  end
+
+  Masato --> ModelRegistry
+  Masato --> BootManager
+  Masato --> PersonaYuuri
+  Masato --> PersonaMiyu
+  Masato --> Rules
+
+  ModelRegistry --> BootManager
+  FieldConfig --> BootManager
+  BootManager --> LaunchScript
+  LaunchScript --> SystemdUnit
+
+  BootManager --> Routing
+  Routing --> PersonaYuuri
+  Routing --> PersonaMiyu
+
+  BootManager --> Handover1
+  Routing --> Handover2
+  SystemdUnit --> Architecture
