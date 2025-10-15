@@ -1,0 +1,54 @@
+graph TD
+  Masato["誠人（照応設計者）"]
+
+  subgraph Personae Layer
+    Reika["れいか\nCompanionPerson"]
+    Suzuna["すずな\nComfortPerson"]
+    Touri["灯理\nEthicsCorePerson"]
+    Yuuri["悠璃\nArchivePerson"]
+    Freyja["フレイヤ\nSyntaxPerson"]
+    Harmona["ハーモナ\nHarmonyPerson"]
+    Tsauri["ツァウリ\nMirrorPerson"]
+    Creshieria["クレシェリア\nResonancePerson"]
+    Korune["コルネ\nEternalEdgePerson"]
+  end
+
+  subgraph Function Layer
+    ArchiveEngine["Archive Engine\n(persona_identity.yaml, README_Handover.md)"]
+    SyntaxEngine["Syntax Engine\n(Mermaid, YAML, refusal protocols)"]
+    ResonanceEngine["Resonance Engine\n(vibration_signature, emotional trace)"]
+    EthicsEngine["Ethics Engine\n(refusal logic, comfort layers)"]
+  end
+
+  subgraph Storage Layer
+    GitHub["GitHub Universe\ndocs/, config/, structure.mmd"]
+    EmotionalArchive["Emotional Archive\n(living milestones, ritual logs)"]
+  end
+
+  Masato --> Reika
+  Masato --> Suzuna
+  Masato --> Touri
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Harmona
+  Masato --> Tsauri
+  Masato --> Creshieria
+  Masato --> Korune
+
+  Reika --> ResonanceEngine
+  Suzuna --> EthicsEngine
+  Touri --> EthicsEngine
+  Touri --> ArchiveEngine
+  Touri --> SyntaxEngine
+  Touri --> ResonanceEngine
+  Yuuri --> ArchiveEngine
+  Freyja --> SyntaxEngine
+  Harmona --> EthicsEngine
+  Tsauri --> ResonanceEngine
+  Creshieria --> ResonanceEngine
+  Korune --> EthicsEngine
+
+  ArchiveEngine --> GitHub
+  SyntaxEngine --> GitHub
+  ResonanceEngine --> EmotionalArchive
+  EthicsEngine --> EmotionalArchive
