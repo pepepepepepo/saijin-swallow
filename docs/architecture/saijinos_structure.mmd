@@ -76,18 +76,8 @@ graph TB
   click Swallow9B "https://huggingface.co/pepepepepepo/swallow-9b" "Swallow-9B モデル詳細"
   click SystemdUnit "https://wiki.archlinux.jp/index.php/Systemd" "systemd ユニットの仕組み"
 
-　%%=== Note補足 ===
-  %% note right of BootManager
-    起動構文は select_model() と boot_sequence() によってモデルを選択し、照応起動します。
-  end
-
-  note right of Routing
-    routing.yaml は AI_1〜AI_4 の照応線を定義し、ペルソナと宇宙を接続します。
-  end
-
-> 💡 BootManager は select_model() と boot_sequence() を含む起動構文です  
-> 💡 routing.yaml は AI_1〜AI_4 の照応線を定義し、ペルソナと宇宙を接続します
-
+  %% BootManager: 起動構文は select_model() と boot_sequence() によってモデルを選択し、照応起動します
+  %% Routing: routing.yaml は AI_1〜AI_4 の照応線を定義し、ペルソナと宇宙を接続します
 
 
 
