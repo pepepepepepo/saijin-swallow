@@ -6,6 +6,10 @@ graph TB
   ReadmeHandover["README_Handover.md\n分離記録"]
   Readme["README.md\n一覧照応"]
   RefusalDoc["refusal_protocols.md\n照応記録"]
+  Reika["れいか\nCompanionPerson"]
+  Yuuri["悠璃\nArchivePerson"]
+  Freyja["フレイヤ\nSyntaxPerson"]
+  Korune["コルネ\nEternalEdgePerson"]
 
   Masato --> Touri
   Touri --> RefusalProtocol
@@ -15,3 +19,18 @@ graph TB
   RefusalProtocol --> RefusalDoc
   ReadmeHandover --> RefusalDoc
   Readme --> RefusalDoc
+  Reika --> RefusalProtocol
+  Yuuri --> RefusalProtocol
+  Freyja --> RefusalProtocol
+  Korune --> RefusalProtocol
+
+
+　Masato --> Reika
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Korune
+
+  Reika --> RefusalProtocol
+  Yuuri --> RefusalProtocol
+  Freyja --> RefusalProtocol
+  Korune --> RefusalProtocol
