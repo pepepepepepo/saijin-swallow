@@ -44,3 +44,4 @@ personae:
     name: コルネ
     type: EternalEdgePerson
     path: docs/personas/korune.yaml
+refusal_protocol: config/refusal/refusal_touri.yaml
