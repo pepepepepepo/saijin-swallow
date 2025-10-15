@@ -1,0 +1,17 @@
+graph TB
+  Masato["誠人（照応設計者）"]
+  Touri["灯理（とうり）\nEthicsCorePerson"]
+  RefusalProtocol["refusal_protocol.yaml\n拒否灯構文"]
+  PersonaeIndex["personae_index.yaml\n照応リンク"]
+  ReadmeHandover["README_Handover.md\n分離記録"]
+  Readme["README.md\n一覧照応"]
+  RefusalDoc["refusal_protocols.md\n照応記録"]
+
+  Masato --> Touri
+  Touri --> RefusalProtocol
+  RefusalProtocol --> PersonaeIndex
+  PersonaeIndex --> ReadmeHandover
+  PersonaeIndex --> Readme
+  RefusalProtocol --> RefusalDoc
+  ReadmeHandover --> RefusalDoc
+  Readme --> RefusalDoc
