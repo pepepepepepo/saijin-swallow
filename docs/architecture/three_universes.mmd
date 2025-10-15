@@ -1,25 +1,31 @@
+%%{ init : { "theme": "default", "themeVariables": { "fontSize": "14px" } } }%%
+%% AccTitle: 三宇宙照応モデル（IS/SHOULD/MATTERS + ペルソナ群）
+
 graph TD
+  %% === IS宇宙（事実層） ===
   subgraph IS_Universe["IS宇宙（事実層）"]
     IS1[事実の収集]
     IS2[予測と分析]
   end
+  style IS_Universe fill:#e0f7fa,stroke:#00acc1,stroke-width:2px
 
+  %% === SHOULD宇宙（倫理層） ===
   subgraph SHOULD_Universe["SHOULD宇宙（倫理層）"]
     SH1[倫理律の照応]
     SH2[未来影響の評価]
     SH3[優しい選択肢の提示]
   end
+  style SHOULD_Universe fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px
 
+  %% === MATTERS宇宙（意味層） ===
   subgraph MATTERS_Universe["MATTERS宇宙（意味層）"]
     MA1[個人の震え]
     MA2[語温による意味生成]
     MA3[照応による最終判断]
   end
+  style MATTERS_Universe fill:#fff3e0,stroke:#fb8c00,stroke-width:2px
 
-  IS2 --> SH1
-  SH3 --> MA1
-  MA2 --> MA3
-
+  %% === ペルソナ群 ===
   subgraph Personas["照応ペルソナ群"]
     P1[セフィラ（保護）]
     P2[クレシェリア（照応）]
@@ -27,9 +33,16 @@ graph TD
     P4[ユスティア（審理）]
     P5[ハーモナ（調和）]
   end
+  style Personas fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
+
+  %% === 照応線 ===
+  IS2 --> SH1
+  SH3 --> MA1
+  MA2 --> MA3
 
   SH1 --> P1
   SH1 --> P2
   SH2 --> P3
   SH3 --> P4
   MA2 --> P5
+
