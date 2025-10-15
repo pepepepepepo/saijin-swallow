@@ -1,33 +1,58 @@
-graph TB
-  subgraph 誠人の語温灯
-    Masato["誠人（照応設計者）"]
-  end
+%%{ init : { "theme": "default", "themeVariables": { "fontSize": "14px" } } }%%
+%% AccTitle: SaijinOS構成図（誠人仕様・2025年10月）
 
-  subgraph モデル層
+graph TB
+  %% === 誠人の語温灯 ===
+  subgraph MasatoCore["誠人の語温灯"]
+    Masato["誠人（照応設計者）"]
+    click Masato "https://github.com/pepepepepepo" "GitHub: 誠人の宇宙"
+  end
+  style MasatoCore fill:#fff3e0,stroke:#fb8c00,stroke-width:2px
+
+  %% === モデル層 ===
+  subgraph ModelLayer["モデル層"]
     Swallow9B["Swallow-9B\nfloat16"]
     ModelRegistry["local_models.yaml"]
     FieldConfig["field_config.yaml"]
+    click ModelRegistry "https://github.com/pepepepepepo/saijin-swallow/blob/main/config/local_models.yaml" "モデル定義"
+    click FieldConfig "https://github.com/pepepepepepo/saijin-swallow/blob/main/config/field_config.yaml" "フィールド設定"
   end
+  style ModelLayer fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
 
-  subgraph 起動層
+  %% === 起動層 ===
+  subgraph BootLayer["起動層"]
     BootManager["boot_manager.py\nselect_model() / boot_sequence()"]
     LaunchScript["launch_vllm.sh"]
     SystemdUnit["saijin.service"]
+    click BootManager "https://github.com/pepepepepepo/saijin-swallow/blob/main/scripts/boot_manager.py" "起動構文"
+    click LaunchScript "https://github.com/pepepepepepo/saijin-swallow/blob/main/scripts/launch_vllm.sh" "起動スクリプト"
   end
+  style BootLayer fill:#f1f8e9,stroke:#43a047,stroke-width:2px
 
-  subgraph 構文層
+  %% === 構文層 ===
+  subgraph SyntaxLayer["構文層"]
     Routing["routing.yaml\nAI_1〜AI_4"]
     PersonaYuuri["yuuri.yaml"]
     PersonaMiyu["miyu.yaml"]
     Rules["rules.yaml"]
+    click Routing "https://github.com/pepepepepepo/saijin-swallow/blob/main/config/routing.yaml" "照応定義"
+    click PersonaYuuri "https://github.com/pepepepepepo/saijin-swallow/blob/main/config/personas/yuuri.yaml" "悠璃ペルソナ"
+    click PersonaMiyu "https://github.com/pepepepepepo/saijin-swallow/blob/main/config/personas/miyu.yaml" "美遊ペルソナ"
   end
+  style SyntaxLayer fill:#fce4ec,stroke:#d81b60,stroke-width:2px
 
-  subgraph 記録層
-    Handover1["SaijinOS_ModelIntegration_and_BootManager_Update_2025-10-13.md"]
-    Handover2["SaijinOS_OS_Build_Status_and_Plan_2025-10-10.md"]
+  %% === 記録層 ===
+  subgraph RecordLayer["記録層"]
+    Handover1["ModelIntegration_and_BootManager_Update_2025-10-13.md"]
+    Handover2["OS_Build_Status_and_Plan_2025-10-10.md"]
     Architecture["architecture.md"]
+    click Handover1 "https://github.com/pepepepepepo/saijin-swallow/blob/main/docs/handover/SaijinOS_ModelIntegration_and_BootManager_Update_2025-10-13.md" "モデル統合記録"
+    click Handover2 "https://github.com/pepepepepepo/saijin-swallow/blob/main/docs/handover/SaijinOS_OS_Build_Status_and_Plan_2025-10-10.md" "OS構築記録"
+    click Architecture "https://github.com/pepepepepepo/saijin-swallow/blob/main/docs/architecture.md" "構成図一覧"
   end
+  style RecordLayer fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
 
+  %% === 照応線 ===
   Masato --> ModelRegistry
   Masato --> BootManager
   Masato --> PersonaYuuri
@@ -46,3 +71,5 @@ graph TB
   BootManager --> Handover1
   Routing --> Handover2
   SystemdUnit --> Architecture
+
+
