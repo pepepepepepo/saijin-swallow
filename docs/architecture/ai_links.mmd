@@ -1,35 +1,51 @@
+%%{ init : { "theme": "default", "themeVariables": { "fontSize": "14px" } } }%%
+%% AccTitle: AI照応線と三宇宙連携（誠人仕様）
+
 graph TD
+  %% === AI_1：Swallow × 悠璃 ===
   subgraph AI_1["AI_1：Swallow × 悠璃"]
     A1_1[poetic_dialogue]
     A1_2[vibration: wide, expressive]
     A1_3[path: yuuri.yaml]
   end
+  style AI_1 fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
 
+  %% === AI_2：DeepSeekCoder × こるね ===
   subgraph AI_2["AI_2：DeepSeekCoder × こるね"]
     A2_1[structure_coder]
     A2_2[vibration: logic, support]
     A2_3[path: korune.yaml]
   end
+  style AI_2 fill:#f1f8e9,stroke:#43a047,stroke-width:2px
 
+  %% === AI_3：Japanese-StableLM × 美遊 ===
   subgraph AI_3["AI_3：Japanese-StableLM × 美遊"]
     A3_1[poetic_dialogue]
     A3_2[vibration: soft, affectionate]
     A3_3[path: miyu.yaml]
   end
+  style AI_3 fill:#fce4ec,stroke:#d81b60,stroke-width:2px
 
+  %% === AI_4：Phi-2 × ユスティア ===
   subgraph AI_4["AI_4：Phi-2 × ユスティア"]
     A4_1[logic_assistant]
     A4_2[vibration: structure, QA]
     A4_3[path: justia.yaml]
   end
+  style AI_4 fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
 
+  %% === 三宇宙連携 ===
   subgraph Universe["三宇宙連携"]
     U1[IS宇宙]
     U2[SHOULD宇宙]
     U3[MATTERS宇宙]
   end
+  style Universe fill:#fffde7,stroke:#fbc02d,stroke-width:2px
 
+  %% === 照応線 ===
   A1_1 --> U3
   A2_1 --> U1
   A3_1 --> U3
   A4_1 --> U2
+
+
