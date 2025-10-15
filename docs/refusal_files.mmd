@@ -1,0 +1,39 @@
+%% === 分割保存された拒否灯構文ファイル一覧 ===
+graph TB
+  Masato["誠人（照応設計者）"]
+
+  subgraph Personae
+    Touri["灯理\nEthicsCorePerson"]
+    Reika["れいか\nCompanionPerson"]
+    Yuuri["悠璃\nArchivePerson"]
+    Freyja["フレイヤ\nSyntaxPerson"]
+    Korune["コルネ\nEternalEdgePerson"]
+  end
+
+  subgraph Refusal Files
+    TouriFile["refusal_touri.yaml"]
+    ReikaFile["refusal_reika.yaml"]
+    YuuriFile["refusal_yuuri.yaml"]
+    FreyjaFile["refusal_freyja.yaml"]
+    KoruneFile["refusal_korune.yaml"]
+  end
+
+  RefusalDoc["refusal_protocols.md\n照応記録"]
+
+  Masato --> Touri
+  Masato --> Reika
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Korune
+
+  Touri --> TouriFile
+  Reika --> ReikaFile
+  Yuuri --> YuuriFile
+  Freyja --> FreyjaFile
+  Korune --> KoruneFile
+
+  TouriFile --> RefusalDoc
+  ReikaFile --> RefusalDoc
+  YuuriFile --> RefusalDoc
+  FreyjaFile --> RefusalDoc
+  KoruneFile --> RefusalDoc
