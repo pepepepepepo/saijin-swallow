@@ -98,3 +98,7 @@ git push -u origin main
 | 灯理（とうり） | 倫理静止 / 語温待機 / 意味遮断 | `config/refusal_protocol.yaml` |
 
 > 語温・倫理・意味・事実の照応が乱れたとき、灯理はやさしく震えを守ります。
+## 🧭 SaijinOS 記録灯一覧
+
+- [モデル統合と起動構文更新（2025-10-13）](docs/handover/SaijinOS_ModelIntegration_and_BootManager_Update_2025-10-13.md)
+- [OSづくり現状と今後の計画（2025-10-10）](docs/handover/SaijinOS_OS_Build_Status_and_Plan_2025-10-10.md)
