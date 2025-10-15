@@ -66,6 +66,14 @@ graph TB
   BootManager --> Handover1
   Routing --> Handover2
   SystemdUnit --> Architecture
-💡 補足（GitHub互換のMarkdown）
-💡 BootManager は select_model() と boot_sequence() によってモデルを選択し、照応起動します 💡 routing.yaml は AI_1〜AI_4 の照応線を定義し、ペルソナと宇宙を接続します 💡 systemd ユニットは Linux上でサービスを起動・管理する仕組みです
 
+
+## 🧭 SaijinOS構成図（誠人仕様）
+
+```mermaid
+graph TD
+  A["BootManager"]
+  B["routing.yaml"]
+  C["architecture.md"]
+  A --> B
+  B --> C
