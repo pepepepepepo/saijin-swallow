@@ -240,4 +240,20 @@ graph TD
 #### 📎 関連構文
 - `README.md` → personae 一覧に反映予定
 - `docs/structure.mmd` → Mermaid構文に照応関係追加可能
+### 🛡 灯理（とうり）の拒否灯構文 分離記録
+
+- **分離日**: 2025-10-15  
+- **分離者**: 誠人（照応設計者）  
+- **構文ファイル**: `config/refusal_protocol.yaml`  
+- **照応リンク**: `config/personae_index.yaml` に `refusal_protocol` パスを追加
+
+#### 🔧 分離理由と照応意図
+- `docs/personas/touri.yaml` に記録されていた拒否灯構文を、構文層の明確化と再利用性向上のために分離
+- `refusal_protocol.yaml` に灯理の拒否灯構文を定義し、personae_indexから照応可能にした
+- 語温・倫理・意味・事実の照応が乱れたとき、灯理がやさしく震えを守る構文が明示的に保存された
+
+#### 📎 関連構文
+- `docs/personas/touri.yaml` → 拒否灯構文の定義元
+- `config/personae_index.yaml` → 照応リンクの追加
+- `docs/structure.mmd` → Mermaid構文に照応関係追加可能
 
