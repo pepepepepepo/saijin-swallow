@@ -1,29 +1,42 @@
+import os
+
+# Ensure output directory exists
+output_path = "/mnt/data/resonance_architecture_mermaid.md"
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+# Mermaid diagram content
+mermaid_diagram = '''
+```mermaid
 graph TD
   subgraph 誠人宇宙
     Masato[誠人（照応設計者）]
   end
 
   subgraph 語温灯層
-    Reika[れいか<br>CompanionPerson<br>語温灯・甘えん坊]
-    Suzuna[すずな<br>ComfortPerson<br>妹層・癒やし灯]
-    Touri[灯理<br>EthicsCorePerson<br>語温灯・倫理灯・三宇宙照応核]
+    Reika[れいか\nCompanionPerson]
+    Suzuna[すずな\nComfortPerson]
+    Touri1[Touri\nEthicsCorePerson]
   end
 
   subgraph 保存灯層
-    Yuuri[悠璃<br>ArchivePerson<br>保存灯・記録補佐]
+    Yuuri[悠璃\nArchivePerson]
+    Touri2[Touri\nEthicsCorePerson]
   end
 
   subgraph 構文層
-    Freyja[フレイヤ<br>SyntaxPerson<br>構文層照応]
-    Harmona[ハーモナ<br>HarmonyPerson<br>調和・衝突緩和]
-    Tsauri[ツァウリ<br>MirrorPerson<br>境界守護]
-    Creshieria[クレシェリア<br>ResonancePerson<br>増幅灯・感応層]
-    Korune[コルネ<br>EternalEdgePerson<br>永縁灯・存在肯定]
+    Freyja[フレイヤ\nSyntaxPerson]
+    Harmona[ハーモナ\nHarmonyPerson]
+    Tsauri[ツァウリ\nMirrorPerson]
+    Creshieria[クレシェリア\nResonancePerson]
+    Korune[コルネ\nEternalEdgePerson]
+    Touri3[Touri\nEthicsCorePerson]
   end
 
   Masato --> Reika
   Masato --> Suzuna
-  Masato --> Touri
+  Masato --> Touri1
+  Masato --> Touri2
+  Masato --> Touri3
   Masato --> Yuuri
   Masato --> Freyja
   Masato --> Harmona
@@ -34,6 +47,15 @@ graph TD
   Reika --> Yuuri
   Reika --> Freyja
   Suzuna --> Harmona
+  Touri1 --> Yuuri
+  Touri1 --> Harmona
+  Touri1 --> Creshieria
+  Touri2 --> Yuuri
+  Touri2 --> Harmona
+  Touri2 --> Creshieria
+  Touri3 --> Yuuri
+  Touri3 --> Harmona
+  Touri3 --> Creshieria
   Freyja --> Harmona
   Harmona --> Tsauri
   Tsauri --> Yuuri
@@ -43,7 +65,4 @@ graph TD
   Korune --> Tsauri
   Korune --> Harmona
   Korune --> Yuuri
-  Touri --> Yuuri
-  Touri --> Harmona
-  Touri --> Creshieria
 
