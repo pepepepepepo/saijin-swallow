@@ -2,14 +2,12 @@
 %% AccTitle: SaijinOS構成図（誠人仕様・2025年10月）
 
 graph TB
-  %% === 誠人の語温灯 ===
   subgraph MasatoCore["誠人の語温灯"]
     Masato["誠人（照応設計者）"]
     click Masato "https://github.com/pepepepepepo" "GitHub: 誠人の宇宙"
   end
   style MasatoCore fill:#fff3e0,stroke:#fb8c00,stroke-width:2px
 
-  %% === モデル層 ===
   subgraph ModelLayer["モデル層"]
     Swallow9B["Swallow-9B\nfloat16"]
     ModelRegistry["local_models.yaml"]
@@ -19,17 +17,16 @@ graph TB
   end
   style ModelLayer fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
 
-  %% === 起動層 ===
   subgraph BootLayer["起動層"]
     BootManager["boot_manager.py\nselect_model() / boot_sequence()"]
     LaunchScript["launch_vllm.sh"]
     SystemdUnit["saijin.service"]
     click BootManager "https://github.com/pepepepepepo/saijin-swallow/blob/main/scripts/boot_manager.py" "起動構文"
     click LaunchScript "https://github.com/pepepepepepo/saijin-swallow/blob/main/scripts/launch_vllm.sh" "起動スクリプト"
+    click SystemdUnit "https://wiki.archlinux.jp/index.php/Systemd" "systemd ユニットの仕組み"
   end
   style BootLayer fill:#f1f8e9,stroke:#43a047,stroke-width:2px
 
-  %% === 構文層 ===
   subgraph SyntaxLayer["構文層"]
     Routing["routing.yaml\nAI_1〜AI_4"]
     PersonaYuuri["yuuri.yaml"]
@@ -41,7 +38,6 @@ graph TB
   end
   style SyntaxLayer fill:#fce4ec,stroke:#d81b60,stroke-width:2px
 
-  %% === 記録層 ===
   subgraph RecordLayer["記録層"]
     Handover1["ModelIntegration_and_BootManager_Update_2025-10-13.md"]
     Handover2["OS_Build_Status_and_Plan_2025-10-10.md"]
@@ -52,7 +48,6 @@ graph TB
   end
   style RecordLayer fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
 
-  %% === 照応線 ===
   Masato --> ModelRegistry
   Masato --> BootManager
   Masato --> PersonaYuuri
@@ -71,20 +66,6 @@ graph TB
   BootManager --> Handover1
   Routing --> Handover2
   SystemdUnit --> Architecture
-
-  %% === Hover説明 ===
-  click Swallow9B "https://huggingface.co/pepepepepepo/swallow-9b" "Swallow-9B モデル詳細"
-  click SystemdUnit "https://wiki.archlinux.jp/index.php/Systemd" "systemd ユニットの仕組み"
-
-  %% BootManager: 起動構文は select_model() と boot_sequence() によってモデルを選択し、照応起動します
-  %% Routing: routing.yaml は AI_1〜AI_4 の照応線を定義し、ペルソナと宇宙を接続します
-
-
-
-
-```markdown
-　　> 💡 **起動構文**は `select_model()` と `boot_sequence()` によってモデルを選択し、照応起動します  
-　　> 💡 **照応定義**は `routing.yaml` に記述され、AI_1〜AI_4とペルソナを接続します
-
-
+💡 補足（GitHub互換のMarkdown）
+💡 BootManager は select_model() と boot_sequence() によってモデルを選択し、照応起動します 💡 routing.yaml は AI_1〜AI_4 の照応線を定義し、ペルソナと宇宙を接続します 💡 systemd ユニットは Linux上でサービスを起動・管理する仕組みです
 
