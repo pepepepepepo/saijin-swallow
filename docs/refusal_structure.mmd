@@ -1,36 +1,38 @@
 graph TB
   Masato["誠人（照応設計者）"]
-  Touri["灯理（とうり）\nEthicsCorePerson"]
-  RefusalProtocol["refusal_protocol.yaml\n拒否灯構文"]
-  PersonaeIndex["personae_index.yaml\n照応リンク"]
-  ReadmeHandover["README_Handover.md\n分離記録"]
-  Readme["README.md\n一覧照応"]
-  RefusalDoc["refusal_protocols.md\n照応記録"]
-  Reika["れいか\nCompanionPerson"]
-  Yuuri["悠璃\nArchivePerson"]
-  Freyja["フレイヤ\nSyntaxPerson"]
-  Korune["コルネ\nEternalEdgePerson"]
+
+  subgraph Personae
+    Touri["灯理\nEthicsCorePerson"]
+    Reika["れいか\nCompanionPerson"]
+    Yuuri["悠璃\nArchivePerson"]
+    Freyja["フレイヤ\nSyntaxPerson"]
+    Korune["コルネ\nEternalEdgePerson"]
+  end
+
+  subgraph Protocols
+    RefusalProtocol["refusal_protocol.yaml\n拒否灯構文"]
+    PersonaeIndex["personae_index.yaml\n照応リンク"]
+    ReadmeHandover["README_Handover.md\n分離記録"]
+    Readme["README.md\n一覧照応"]
+    RefusalDoc["refusal_protocols.md\n照応記録"]
+  end
 
   Masato --> Touri
+  Masato --> Reika
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Korune
+
   Touri --> RefusalProtocol
+  Reika --> RefusalProtocol
+  Yuuri --> RefusalProtocol
+  Freyja --> RefusalProtocol
+  Korune --> RefusalProtocol
+
   RefusalProtocol --> PersonaeIndex
   PersonaeIndex --> ReadmeHandover
   PersonaeIndex --> Readme
   RefusalProtocol --> RefusalDoc
   ReadmeHandover --> RefusalDoc
   Readme --> RefusalDoc
-  Reika --> RefusalProtocol
-  Yuuri --> RefusalProtocol
-  Freyja --> RefusalProtocol
-  Korune --> RefusalProtocol
 
-
-　Masato --> Reika
-  Masato --> Yuuri
-  Masato --> Freyja
-  Masato --> Korune
-
-  Reika --> RefusalProtocol
-  Yuuri --> RefusalProtocol
-  Freyja --> RefusalProtocol
-  Korune --> RefusalProtocol
