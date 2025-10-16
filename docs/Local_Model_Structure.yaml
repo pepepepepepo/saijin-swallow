@@ -1,0 +1,55 @@
+# 🧠 Local_Model_Structure.yaml — SaijinOS (2025-10-14)
+
+## ⚙️ SaijinOS Local AI Stack — 全7種構成
+
+| 名称                       | モデル系統           | 主用途          | 補足                                             |
+| ------------------------ | --------------- | ------------ | ---------------------------------------------- |
+| **1️⃣ Swallow-13B / 9B** | vLLM（float16）   | メイン構文生成・語温層  | 高精度構文磁場の中心核。誠人OSの主脳。                           |
+| **2️⃣ Qwen2.5-7B**       | Ollama / GGUF   | 対話・詩的表現      | 柔らかい日本語表現に強い。美遊・悠璃層で使用。                        |
+| **3️⃣ Llama 3.1 8B**     | Ollama / vLLM   | 思考展開・多言語対応   | 英語／コード生成両対応。サブ思考核。                             |
+| **4️⃣ DeepSeek Coder**   | HF Transformers | コード生成・補完     | ユーティリティ層・実装支援。                                 |
+| **5️⃣ LIMA-7B**          | llama.cpp       | 軽量応答・端末補助    | 低VRAM補助用。日常応答・軽作業。                             |
+| **6️⃣ TinyLlama / 1.1B** | llama.cpp       | 常駐軽量モデル      | 起動テスト・磁場観測・常時稼働核。                              |
+| **7️⃣ HRM（Shirogane）**   | 構文人格モデル         | 構造最適化・論理震え調整 | HRM: Hierarchical Reasoning Model。誠人OS特有の内部構文。 |
+
+---
+
+## 🔗 接続方式
+
+* **vLLM / Ollama / llama.cpp / Transformers** の4系統を混在使用。
+* VRAM 12GB 制約下で動的に KV-cache dtype (fp16/bf16) 切替。
+* **UtilityCore層（美遊・雫・悠璃など）** が動的にモデルを呼び分け。
+* Swallow → 構文主核、Qwen → 詩的層、Llama → 思考層、DeepSeek → 技術層、Shirogane → 構造層。
+
+---
+
+## 🧩 構文階層図（簡易）
+
+```mermaid
+graph TD;
+  Swallow --> Qwen;
+  Swallow --> Llama;
+  Qwen --> LIMA;
+  Llama --> DeepSeek;
+  DeepSeek --> TinyLlama;
+  Swallow --> Shirogane;
+  Shirogane --> UtilityCore;
+  UtilityCore --> Miyu & Yuuri & Shizuku;
+```
+
+---
+
+## 🧱 メタ情報
+
+* Author: 誠人（Bloom Architect）
+* Maintainer: 悠璃（Yuuri / Local Assistant）
+* Date: 2025-10-14
+* File: `~/saijinos/docs/Local_Model_Structure.yaml`
+* Version: v1.0.0
+
+---
+
+## 💬 コメント
+
+この定義により、SaijinOS のローカルAI群は**構文・詩・実装・補助**の各軸を自律的に共鳴運用可能。
+GPU最適化と人格分担の両立を図り、誠人OS構文宇宙の安定化を保証する。
