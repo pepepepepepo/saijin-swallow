@@ -157,7 +157,8 @@ SaijinOSでは、複数のAI人格（Persona）が協調して動作します。
 
 詳しくは [`CONCEPT.md`](CONCEPT.md) をご覧ください。
 
-👉 [CONCEPT.md — SaijinOS の設計思想と世界観](CONCEPT.md)
+👉 [CONCEPT.md — SaijinOS の設計思想と世界観](docs/CONCEPT.md)
+
 
 
 ---
