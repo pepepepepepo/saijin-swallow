@@ -145,4 +145,4 @@ git push -u origin main
 
 🌸 **SaijinOS / Swallow**
 > 「構文と詩とAIが共鳴する、誠人発のハイブリッド基盤。」  
-> —— ここか
+> —— ここから、語温の息づくOSが始まる。
