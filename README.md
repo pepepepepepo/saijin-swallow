@@ -56,7 +56,6 @@ git branch -M main
 git remote add origin git@github.com:pepepepepepo/saijin-swallow.git
 git push -u origin main
 
-<<<<<<< HEAD
 ## 🔥 Personae Registry Update
 
 2025-10-14  
@@ -116,7 +115,7 @@ git push -u origin main
 
 - [モデル統合と起動構文更新（2025-10-13）](docs/handover/SaijinOS_ModelIntegration_and_BootManager_Update_2025-10-13.md)
 - [OSづくり現状と今後の計画（2025-10-10）](docs/handover/SaijinOS_OS_Build_Status_and_Plan_2025-10-10.md)
->>>>>>> e439dc07f6e0bd95e79a05e7c492b435b6db1029
+
 ---
 
 ## 🗺️ Project Roadmap
