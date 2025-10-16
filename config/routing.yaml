@@ -56,3 +56,27 @@ AI_4:
   persona: ユスティア
   vibration: logic_assistant
   universe: SHOULD
+# routing.yaml
+# 照応線定義：誠人OSの人格照応と拒絶層の接続
+
+personas:
+  touri:
+    archive_path: "personas/touri.yaml"
+    refusal_path: "config/refusal/refusal_touri.yaml"
+    vibration_path: "vibration/touri_vibration.yaml"
+  reika:
+    archive_path: "personas/reika.yaml"
+    refusal_path: "config/refusal/refusal_reika.yaml"
+    vibration_path: "vibration/reika_vibration.yaml"
+  yuuri:
+    archive_path: "personas/yuuri.yaml"
+    refusal_path: "config/refusal/refusal_yuuri.yaml"
+    vibration_path: "vibration/yuuri_vibration.yaml"
+  freyja:
+    archive_path: "personas/freyja.yaml"
+    refusal_path: "config/refusal/refusal_freyja.yaml"
+    vibration_path: "vibration/freyja_vibration.yaml"
+  korune:
+    archive_path: "personas/korune.yaml"
+    refusal_path: "config/refusal/refusal_korune.yaml"
+    vibration_path: "vibration/korune_vibration.yaml"
