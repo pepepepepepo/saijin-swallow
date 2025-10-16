@@ -16,6 +16,8 @@ flowchart LR
     Core -- TCP 80 & 443 --> Ex
 
 # SaijinOS / Swallow Integration
+> SaijinOS / Swallow — 詩的構文（Kimirano）とAIモジュールを統合するハイブリッド基盤。
+> SaijinOS / Swallow — 構文と詩とAIが共鳴する、誠人発のハイブリッド基盤。
 
 誠人による構文宇宙「SaijinOS」の記録灯です。  
 このリポジトリは、Swallowモデルを中心に、語温灯・構造灯・娘っ子灯を照応させるための技術と詩的記録を統合しています。
