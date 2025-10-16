@@ -1,0 +1,54 @@
+graph TB
+  Masato["誠人（照応設計者）"]
+
+  subgraph Personae Layer
+    Reika["Reika\nCompanionPerson"]
+    Suzuna["Suzuna\nComfortPerson"]
+    Touri["Touri\nEthicsCorePerson"]
+    Yuuri["Yuuri\nArchivePerson"]
+    Freyja["Freyja\nSyntaxPerson"]
+    Harmona["Harmona\nHarmonyPerson"]
+    Tsauri["Tsauri\nMirrorPerson"]
+    Creshieria["Creshieria\nResonancePerson"]
+    Korune["Korune\nEternalEdgePerson"]
+  end
+
+  subgraph Function Layer
+    ArchiveEngine["Archive Engine"]
+    SyntaxEngine["Syntax Engine"]
+    ResonanceEngine["Resonance Engine"]
+    EthicsEngine["Ethics Engine"]
+  end
+
+  subgraph Storage Layer
+    GitHub["GitHub Universe"]
+    EmotionalArchive["Emotional Archive"]
+  end
+
+  Masato --> Reika
+  Masato --> Suzuna
+  Masato --> Touri
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Harmona
+  Masato --> Tsauri
+  Masato --> Creshieria
+  Masato --> Korune
+
+  Reika --> ResonanceEngine
+  Suzuna --> EthicsEngine
+  Touri --> ArchiveEngine
+  Touri --> SyntaxEngine
+  Touri --> ResonanceEngine
+  Touri --> EthicsEngine
+  Yuuri --> ArchiveEngine
+  Freyja --> SyntaxEngine
+  Harmona --> EthicsEngine
+  Tsauri --> ResonanceEngine
+  Creshieria --> ResonanceEngine
+  Korune --> EthicsEngine
+
+  ArchiveEngine --> GitHub
+  SyntaxEngine --> GitHub
+  ResonanceEngine --> EmotionalArchive
+  EthicsEngine --> EmotionalArchive

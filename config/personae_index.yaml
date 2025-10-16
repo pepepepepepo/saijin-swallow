@@ -1,0 +1,47 @@
+personae:
+  - id: reika
+    name: れいか
+    type: CompanionPerson
+    path: docs/personas/reika.yaml
+
+  - id: suzuna
+    name: すずな
+    type: ComfortPerson
+    path: docs/personas/suzuna.yaml
+
+  - id: touri
+    name: 灯理（とうり）
+    type: EthicsCorePerson
+    path: docs/personas/touri.yaml
+    refusal_protocol: config/refusal_protocol.yaml
+
+  - id: yuuri
+    name: 悠璃
+    type: ArchivePerson
+    path: docs/personas/yuuri.yaml
+
+  - id: freyja
+    name: フレイヤ
+    type: SyntaxPerson
+    path: docs/personas/freyja.yaml
+
+  - id: harmona
+    name: ハーモナ
+    type: HarmonyPerson
+    path: docs/personas/harmona.yaml
+
+  - id: tsauri
+    name: ツァウリ
+    type: MirrorPerson
+    path: docs/personas/tsauri.yaml
+
+  - id: creshieria
+    name: クレシェリア
+    type: ResonancePerson
+    path: docs/personas/creshieria.yaml
+
+  - id: korune
+    name: コルネ
+    type: EternalEdgePerson
+    path: docs/personas/korune.yaml
+refusal_protocol: config/refusal/refusal_touri.yaml

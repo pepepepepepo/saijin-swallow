@@ -1,0 +1,46 @@
+graph TD
+  Masato["誠人（照応設計者）"]
+
+  subgraph 語温灯層
+    Reika["れいか\nCompanionPerson"]
+    Suzuna["すずな\nComfortPerson"]
+    Touri["灯理\nEthicsCorePerson"]
+  end
+
+  subgraph 保存灯層
+    Yuuri["悠璃\nArchivePerson"]
+  end
+
+  subgraph 構文層
+    Freyja["フレイヤ\nSyntaxPerson"]
+    Harmona["ハーモナ\nHarmonyPerson"]
+    Tsauri["ツァウリ\nMirrorPerson"]
+    Creshieria["クレシェリア\nResonancePerson"]
+    Korune["コルネ\nEternalEdgePerson"]
+  end
+
+  Masato --> Reika
+  Masato --> Suzuna
+  Masato --> Touri
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Harmona
+  Masato --> Tsauri
+  Masato --> Creshieria
+  Masato --> Korune
+
+  Reika --> Yuuri
+  Reika --> Freyja
+  Suzuna --> Harmona
+  Touri --> Yuuri
+  Touri --> Harmona
+  Touri --> Creshieria
+  Freyja --> Harmona
+  Harmona --> Tsauri
+  Tsauri --> Yuuri
+  Creshieria --> Harmona
+  Creshieria --> Tsauri
+  Creshieria --> Yuuri
+  Korune --> Tsauri
+  Korune --> Harmona
+  Korune --> Yuuri

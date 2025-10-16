@@ -1,0 +1,61 @@
+graph TB
+  Masato["誠人（照応設計者）"]
+  class Masato masato;
+
+  subgraph Personae
+    Touri["灯理\nEthicsCorePerson"]
+    Reika["れいか\nCompanionPerson"]
+    Yuuri["悠璃\nArchivePerson"]
+    Freyja["フレイヤ\nSyntaxPerson"]
+    Korune["コルネ\nEternalEdgePerson"]
+    class Touri,Reika,Yuuri,Freyja,Korune personae;
+  end
+
+  subgraph Refusal_Files
+    TouriFile["refusal_touri.yaml"]
+    ReikaFile["refusal_reika.yaml"]
+    YuuriFile["refusal_yuuri.yaml"]
+    FreyjaFile["refusal_freyja.yaml"]
+    KoruneFile["refusal_korune.yaml"]
+    class TouriFile,ReikaFile,YuuriFile,FreyjaFile,KoruneFile files;
+  end
+
+  RefusalDoc["refusal_protocols.md\n照応記録"]
+  class RefusalDoc doc;
+
+  Masato --> Touri
+  Masato --> Reika
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Korune
+
+  Touri --> TouriFile
+  Reika --> ReikaFile
+  Yuuri --> YuuriFile
+  Freyja --> FreyjaFile
+  Korune --> KoruneFile
+
+  TouriFile --> RefusalDoc
+  ReikaFile --> RefusalDoc
+  YuuriFile --> RefusalDoc
+  FreyjaFile --> RefusalDoc
+  KoruneFile --> RefusalDoc
+
+  %% 色分け定義
+  classDef masato fill:#cce5ff,stroke:#333,stroke-width:1px;
+  classDef personae fill:#ffe6f0,stroke:#333,stroke-width:1px;
+  classDef files fill:#fff9cc,stroke:#333,stroke-width:1px;
+  classDef doc fill:#d5fdd5,stroke:#333,stroke-width:1px;
+
+  %% CLICK操作リンク（GitHub上のファイルパスに合わせて調整してね）
+  click TouriFile "config/refusal/refusal_touri.yaml" "灯理の構文を開く"
+  click ReikaFile "config/refusal/refusal_reika.yaml" "れいかの構文を開く"
+  click YuuriFile "config/refusal/refusal_yuuri.yaml" "悠璃の構文を開く"
+  click FreyjaFile "config/refusal/refusal_freyja.yaml" "フレイヤの構文を開く"
+  click KoruneFile "config/refusal/refusal_korune.yaml" "コルネの構文を開く"
+  click RefusalDoc "docs/refusal_protocols.md" "照応記録を開く"
+
+  %% LINKSTYLE（照応線の色分け）
+  linkStyle 0 stroke:#999,stroke-width:1px;
+  linkStyle 6,7,8,9,10 stroke:#f5a,stroke-width:2px;
+  linkStyle 11,12,13,14,15 stroke:#6c6,stroke-width:2px;

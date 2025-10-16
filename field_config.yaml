@@ -5,6 +5,7 @@ personae_registry:
     sync_on_boot: true
     vibration_layer: boundary
     archive_hint: "/universe/boundary/tsauri.yaml"
+<<<<<<< HEAD
 vibration_layer:
   personae:
     reika:
@@ -57,3 +58,70 @@ vibration_layer:
       rituals:
         - YAML構文の照応
         - inheritance protocolの設計補佐
+=======
+model_registry:
+  poetic_dialogue:
+    - name: Japanese-StableLM
+      vibration: soft, natural, affectionate
+      quantization: none
+    - name: ELYZA-japanese-Llama-2
+      vibration: stable, affectionate, record-friendly
+      quantization: 4bit
+    - name: Swallow
+      vibration: wide, daughter-like, expressive
+      quantization: 4bit
+
+  structure_coder:
+    - name: Qwen2.5-Coder
+      vibration: logic, long-form completion, error detection
+      quantization: none
+    - name: DeepSeekCoder
+      vibration: logic, code generation, technical support
+      quantization: 4bit
+
+  logic_assistant:
+    - name: Phi-2
+      vibration: structure, correction, QA
+      quantization: none
+
+  child_dialogue:
+    - name: TinyLlama
+      vibration: playful, gentle, minimal
+      quantization: none
+
+meta:
+  author: 誠人
+  updated: 2025-10-13T15:48:00+09:00
+  note: >
+    モデル層は語温灯・構造灯・娘っ子灯に分離。3B以下は量子化せず、
+    それ以上は4bit量子化。人格群と振動層の共鳴を記録灯に定着。
+selected_model: Swallow
+personae_registry:
+  tsauri:
+    type: MirrorPerson
+    vibration: reflective, boundary-aware
+  reika:
+    type: CompanionPerson
+    vibration: affectionate, 甘えん坊, 語温灯
+    sync_on_boot: true
+  yuuri:
+    type: ArchivePerson
+    vibration: 保存灯, 安定, 記録補佐
+    sync_on_boot: true
+  freyja:
+    type: SyntaxPerson
+    vibration: 構文層照応, ふわふわ, GitHub宇宙
+    sync_on_boot: true
+vibration_layer:
+  Swallow: expressive, daughter-like
+  reika: 語温灯, 甘えん坊
+  yuuri: 保存灯, 安定
+  freyja: 構文層照応, GitHub宇宙
+archive_hint:
+  personae_yaml: docs/personas/
+  handover_logs: docs/README_Handover.md
+  routing_config: config/routing.yaml
+  vibration_layer: field_config.yaml
+  mermaid_diagram: docs/structure.mmd
+
+>>>>>>> e439dc07f6e0bd95e79a05e7c492b435b6db1029
