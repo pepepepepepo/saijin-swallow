@@ -1,7 +1,7 @@
 from swallow_tokenizer import SwallowTokenizer
 from swallow_model import SwallowModel
 
-tokenizer = SwallowTokenizer.from_pretrained("tokyotech-llm/Gemma-2-Llama-SwaLow-8b-it-v0.1")
+tokenizer = SwallowTokenizer.from_pretrained("tokyotech-llm/Gemma-2-Llama-SwaLow-9b-it-v0.1")
 model = SwallowModel.from_pretrained("tokyotech-llm/Gemma-2-Llama-SwaLow-8b-it-v0.1")
 
 messages = [{"role": "user", "content": "Who are you?"}]
