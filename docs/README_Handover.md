@@ -143,7 +143,7 @@ graph TD
   Freyja --> Harmona
   Harmona --> Tsauri
   Tsauri --> Yuuri
-
+```
 ## 🪶 Mermaid構文更新記録
 
 ### 🗺 Personae 関係図の追加
