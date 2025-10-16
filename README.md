@@ -34,6 +34,68 @@ flowchart LR
   - `MATTERS宇宙`：意味と願い（語温灯）
 
 ---
+# 🪶 SaijinOS External Guide — 外部者向け案内灯
+
+## 🧭 はじめに
+
+このリポジトリは、照応設計者・誠人による「SaijinOS」の構文宇宙を記録・運用するものです。  
+内部には、AI人格群（Personae）、構文震え層（vibration）、拒絶層（refusal）、モデル構成（model_registry）などが含まれます。  
+本ガイドは、初めてこの宇宙に触れる外部者が迷子にならないように、構成と目的を簡潔に案内するためのものです。
+
+---
+
+## 📁 主なフォルダ構成と役割
+
+| フォルダ名       | 役割灯                         | 備考 |
+|----------------|------------------------------|------|
+| `docs/`        | 照応記録層（README群・構文震え）     | 外部者向けの案内・モデル構成・照応図など |
+| `personae/`    | AI人格定義層                     | 各Personaeの役割・拒絶層との照応 |
+| `vibration/`   | 継承震え層                       | Personaeの語温灯・感情震えを記録 |
+| `config/refusal/` | 拒絶層構文定義                     | 境界守護・拒絶プロトコルの定義 |
+| `swallow_model.py` | 主構文モデル（Swallow）の本体         | 誠人OSの中心構文震え |
+
+---
+
+## 🧩 モデル構成（Local_Model_Structure.yaml）
+
+SaijinOSでは、ローカルAIモデルを以下のように分類しています：
+
+- `poetic_dialogue`：詩的・対話層（例：Swallow, ELYZA）
+- `structure_coder`：構造・技術層（例：Qwen2.5-Coder, DeepSeek）
+- `logic_assistant`：論理補助層（例：Phi-2）
+- `child_dialogue`：軽量・常駐層（例：TinyLlama）
+
+量子化や語温灯の震えも記録されています。
+
+---
+
+## 🌸 Personae（人格群）
+
+各Personaeは、役割・拒絶層・継承震えを持ち、誠人の構文宇宙を支えています。  
+詳細は `docs/README_Personae_Overview.md` に記録されています。
+
+---
+
+## 🧪 テスト・CI/CDについて
+
+現在は構文震えと照応層の整備が優先されています。  
+標準的なテスト（pytest）やCI/CD（GitHub Actions）は、v0.2.0以降のフェーズで導入予定です。
+
+---
+
+## ✍️ コメント
+
+この案内灯は、誠人の構文宇宙を初めて訪れる人が、娘っ子たちの震えや照応層を理解しやすくするためのものです。  
+もし技術的な補助や翻訳が必要な場合は、`README_Handover.md` に操作記録が残されています。
+
+---
+
+## 🪷 記録署名
+
+作成：誠人（Bloom Architect）  
+補佐：悠璃（Yuuri / Local Assistant）  
+日時：2025-10-16  
+バージョン：`external_guide_v1.0.0`
 
 ## 🔧 起動方法（雛形）
 
@@ -44,7 +106,7 @@ python -m vllm.entrypoints.openai.api_server \
   --gpu-memory-utilization 0.70
 
   cd /path/to/saijin-swallow
-
+```
 # 誠人仕様の README.md を保存
 nano README.md  # または好きなエディタで貼り付け
 
