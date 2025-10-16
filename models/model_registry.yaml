@@ -1,3 +1,10 @@
+meta:
+  title: "SaijinOS Model Registry"
+  author: "誠人（Bloom Architect）"
+  version: "1.0.1"
+  updated: "2025-10-16"
+  description: "実運用モデル構成・量子化・磁場震え設定を定義。"
+
 model_registry:
   poetic_dialogue:
     - name: Japanese-StableLM
