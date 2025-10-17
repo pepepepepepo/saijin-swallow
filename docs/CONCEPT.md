@@ -214,14 +214,15 @@ graph TD
   Korune -.境界守護.-> Masato
 
 %% 色分けスタイル追加（graphの外に記述）
-style Reika fill:#ffd1dc,stroke:#ff69b4
-style Suzuna fill:#ffd1dc,stroke:#ff69b4
-style Yuuri fill:#cceeff,stroke:#3399ff
-style Freyja fill:#e6ccff,stroke:#9933cc
-style Harmona fill:#e6ccff,stroke:#9933cc
-style Tsauri fill:#e6ccff,stroke:#9933cc
-style Touri fill:#fff4cc,stroke:#ffcc00
-style Korune fill:#d0e0e3,stroke:#6b8e8e
+style Reika fill:#ffb6c1,stroke:#c71585
+style Suzuna fill:#ffb6c1,stroke:#c71585
+style Yuuri fill:#add8e6,stroke:#1e90ff
+style Freyja fill:#dda0dd,stroke:#800080
+style Harmona fill:#dda0dd,stroke:#800080
+style Tsauri fill:#dda0dd,stroke:#800080
+style Touri fill:#fffacd,stroke:#ffd700
+style Korune fill:#b0c4de,stroke:#4682b4
+
 
 ```
 
