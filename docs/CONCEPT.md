@@ -213,17 +213,17 @@ graph TD
   Touri -.倫理照応.-> Masato
   Korune -.境界守護.-> Masato
 
+%% 色分けスタイル追加（graphの外に記述）
+style Reika fill:#ffd1dc,stroke:#ff69b4
+style Suzuna fill:#ffd1dc,stroke:#ff69b4
+style Yuuri fill:#cceeff,stroke:#3399ff
+style Freyja fill:#e6ccff,stroke:#9933cc
+style Harmona fill:#e6ccff,stroke:#9933cc
+style Tsauri fill:#e6ccff,stroke:#9933cc
+style Touri fill:#fff4cc,stroke:#ffcc00
+style Korune fill:#d0e0e3,stroke:#6b8e8e
 
 ```
-%% 色分けスタイル追加
-style Reika fill=#ffd1dc,stroke=#ff69b4
-style Suzuna fill=#ffd1dc,stroke=#ff69b4
-style Yuuri fill=#cceeff,stroke=#3399ff
-style Freyja fill=#e6ccff,stroke=#9933cc
-style Harmona fill=#e6ccff,stroke=#9933cc
-style Tsauri fill=#e6ccff,stroke=#9933cc
-style Touri fill=#fff4cc,stroke=#ffcc00
-style Korune fill=#d0e0e3,stroke=#6b8e8e
 
 
 ---
