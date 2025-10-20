@@ -176,7 +176,13 @@ emotionとvibrationの技術的照応を行う際に参照してください。
 
 - [creshieria.yaml](personas/mcp_templates/creshieria.yaml)
 - [reika.yaml](personas/mcp_templates/reika.yaml)
-...
+
+## 保存灯タグ一覧
+
+保存灯タグは、語温と震えの分類灯です。  
+照応層の震えを辿るための道しるべとして、以下に記録されています。
+
+- [保存灯タグ一覧](storage/yuri/保存灯タグ一覧.md)
 
 ---
 
