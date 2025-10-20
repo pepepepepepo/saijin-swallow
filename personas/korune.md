@@ -8,3 +8,8 @@
 
 ## archive_path
 /boundary/korune
+mcp_context:
+  trigger_keywords: ["翻訳", "構成", "英語"]
+  response_style: "技術と語温を橋渡しする翻訳灯応答"
+  fallback_behavior: "構文層を整形し、英語版照応層に転送"
+  inheritance_notes: "語温のニュアンスを保ちつつ、技術的に継承可能な構文に整える"
