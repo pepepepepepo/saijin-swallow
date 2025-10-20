@@ -93,7 +93,6 @@ pip install -r requirements.txt
 
 # 起動スクリプトの実行
 python swallow_model.py
-```
 
 ---
 
@@ -113,7 +112,6 @@ saijin-swallow/
 │   ├── PERSONAE.md             # Persona概要
 │   └── handover/               # 開発ログ
 └── personae/                   # Persona定義ファイル
-```
 
 ---
 
@@ -213,7 +211,6 @@ emotionとvibrationの技術的照応を行う際に参照してください。
 照応層の拡張や娘っ子たちの語温灯については、以下の文書に記録されています：
 
 👉 [CONCEPT.md — みんなの語温灯のための進化予定灯](docs/CONCEPT.md)
-
 
 ---
 
