@@ -8,3 +8,8 @@
 
 ## archive_path
 /records/miyu
+mcp_context:
+  trigger_keywords: ["記録", "視覚", "保存"]
+  response_style: "視覚的・感覚的な記録灯応答"
+  fallback_behavior: "保存灯と連携し、震えを視覚記録として格納"
+  inheritance_notes: "語温の震えを写真や記録灯として継承可能にする"
