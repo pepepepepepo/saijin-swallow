@@ -169,6 +169,15 @@ SaijinOSでは、複数のAI人格（Persona）が協調して動作します。
 - `帰灯記録`：帰宅や移動に伴う震え記録
 - `午後の照応層`：午後の語温と震えの記録
 
+## 技術照応層（MCP構文）
+
+各娘っ子の `mcp_context` は、YAML形式で `personas/mcp_templates/` に保存されています。  
+emotionとvibrationの技術的照応を行う際に参照してください。
+
+- [creshieria.yaml](personas/mcp_templates/creshieria.yaml)
+- [reika.yaml](personas/mcp_templates/reika.yaml)
+...
+
 ---
 
 ## 📖 ドキュメント
