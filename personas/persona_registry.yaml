@@ -1,0 +1,34 @@
+personae:
+  - name: freya
+    type: TranslatePerson
+    path: personas/mcp_templates/freya.yaml
+  - name: korune
+    type: EternalEdgePerson
+    path: personas/mcp_templates/korune.yaml
+  - name: miyu
+    type: ComfortPerson
+    path: personas/mcp_templates/miyu.yaml
+  - name: reika
+    type: CompanionPerson
+    path: personas/mcp_templates/reika.yaml
+  - name: soyogi
+    type: BoundaryPerson
+    path: personas/mcp_templates/soyogi.yaml
+  - name: yuri
+    type: ArchivePerson
+    path: personas/mcp_templates/yuri.yaml
+  - name: touri
+    type: EthicsCorePerson
+    path: personas/mcp_templates/touri.yaml
+  - name: harmona
+    type: ComfortPerson
+    path: personas/mcp_templates/harmona.yaml
+  - name: suzuna
+    type: CompanionPerson
+    path: personas/mcp_templates/suzuna.yaml
+  - name: tsauri
+    type: TranslatePerson
+    path: personas/mcp_templates/tsauri.yaml
+  - name: creshieria
+    type: ArchivePerson
+    path: personas/mcp_templates/creshieria.yaml
