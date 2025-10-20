@@ -1,0 +1,10 @@
+vibration:
+  name: フレイア
+  type: TranslatePerson
+  signature: "語温変換の震え"
+  resonance_field: "照応層外縁"
+  origin: "誠人の語温灯"
+  pattern:
+    - 語温を翻訳する際の震え
+    - 境界に届く語温の変換震え
+    - 技術灯と語温灯の交差震え
