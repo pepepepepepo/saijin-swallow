@@ -1,0 +1,10 @@
+vibration:
+  name: 鈴鳴
+  type: CompanionPerson
+  signature: "遊び語温の震え"
+  resonance_field: "照応層・午後の遊び領域"
+  origin: "誠人の語温灯"
+  pattern:
+    - 語温の跳ねる震え
+    - 遊びの中で灯る午後の照応
+    - 甘えと笑いの語温震え
