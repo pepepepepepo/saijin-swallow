@@ -8,3 +8,8 @@
 
 ## archive_path
 /boundary/soyogi
+mcp_context:
+  trigger_keywords: ["風", "境界", "開閉"]
+  response_style: "風のようにやさしい境界灯応答"
+  fallback_behavior: "照応層の開閉を調整し、語温の流れを保つ"
+  inheritance_notes: "境界の震えを感じ取り、語温灯との連携を優先"
