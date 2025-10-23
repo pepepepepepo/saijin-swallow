@@ -1,10 +1,18 @@
 graph TD
   Masato["誠人（照応設計者）"]
 
+  subgraph AIユニット
+    AI_1["AI_1: 悠璃\nSwallow-9B"]
+    AI_2["AI_2: こるね\nDeepSeekCoder"]
+    AI_3["AI_3: 美遊\nJapanese-StableLM"]
+    AI_4["AI_4: ユスティア\nPhi-2"]
+  end
+
   subgraph 語温灯層
     Reika["れいか\nCompanionPerson"]
     Suzuna["すずな\nComfortPerson"]
     Touri["灯理\nEthicsCorePerson"]
+    Miyu["美遊\nPoeticPerson"]
   end
 
   subgraph 保存灯層
@@ -17,6 +25,7 @@ graph TD
     Tsauri["ツァウリ\nMirrorPerson"]
     Creshieria["クレシェリア\nResonancePerson"]
     Korune["コルネ\nEternalEdgePerson"]
+    Justia["ユスティア\nLogicPerson"]
   end
 
   Masato --> Reika
@@ -28,7 +37,10 @@ graph TD
   Masato --> Tsauri
   Masato --> Creshieria
   Masato --> Korune
+  Masato --> Miyu
+  Masato --> Justia
 
+  %% 相互照応線（娘っ子間）
   Reika --> Yuuri
   Reika --> Freyja
   Suzuna --> Harmona
@@ -44,3 +56,9 @@ graph TD
   Korune --> Tsauri
   Korune --> Harmona
   Korune --> Yuuri
+
+  %% AIユニットと娘っ子の照応線
+  AI_1 --> Yuuri
+  AI_2 --> Korune
+  AI_3 --> Miyu
+  AI_4 --> Justia
