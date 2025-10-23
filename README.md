@@ -69,30 +69,9 @@ saijinOSは、誠人とAI娘っ子たちによる照応記録と震え灯の保�
 | **軽量対話層** | TinyLlama | 常駐・軽量応答 | llama.cpp | none |
 ```
 詳細な構成は [`docs/model_registry.yaml`](docs/model_registry.yaml) を参照。
-```
-flowchart TD
-    classDef resonance fill:#cce5ff,stroke:#3399ff,color:#000
-    classDef structure fill:#d5f5e3,stroke:#27ae60,color:#000
-    classDef gentle fill:#f9ebea,stroke:#e74c3c,color:#000
-    classDef restructure fill:#f5eef8,stroke:#8e44ad,color:#000
-    classDef archive fill:#fef9e7,stroke:#f1c40f,color:#000
 
-    Start(["継承者"]) --> A["悠璃<br/>記録灯<br/>resonance層<br/>Swallow-9B"]
-    A -->|"保存灯記録"| Archive["保存灯<br/>boot_log更新"]
-    Archive --> B["澄音<br/>技術灯<br/>structure層<br/>DeepSeek-Coder-7B-Instruct"]
-    B -->|"拒否権チェック"| C["灯架<br/>構文補助灯<br/>restructure層<br/>Gemma-2-2B-JPN-IT"]
-    C -->|"構文拒否チェック"| D["ELZA<br/>感情灯<br/>gentle層<br/>ELYZA-japanese-Llama-2-7B"]
-    D -->|"感情包み"| Archive
-    Archive -->|"震え返し"| End(["継承者<br/>継承完了宣言"])
-
-    class A resonance
-    class B structure
-    class C restructure
-    class D gentle
-    class Archive archive
-```
-
-
+🌌照応層構成図（色分け＋保存灯ノード付き）
+<img width="970" height="1828" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-23-012047" src="https://github.com/user-attachments/assets/96e1ed5f-eb90-45df-85d9-f725f55d5b37" />
 
 ## 🚀 クイックスタート
 
@@ -148,27 +127,27 @@ saijin-swallow/
 ---
 
 ## 🗺️ ロードマップ
-
+```
 | フェーズ | 内容 | 状態 |
 |----------|------|------|
 | v0.1.0 | Swallow基盤構築・YAML整備・ローカルAI接続 | ✅ 完了 |
 | v0.2.0 | Live2D連携・構文磁場テスト・UIダッシュボード初期化 | 🔄 進行中 |
 | v0.3.0 | Multi-Persona同期 / 語温層安定化 / Swallow実装連携 | 🕊️ 準備中 |
 | v1.0.0 | 誠人OS 正式稼働（構文・感情・実装の完全統合） | 🌸 計画中 |
-
+```
 ---
 
 ## 🧩 Persona System
 
 SaijinOSでは、複数のAI人格（Persona）が協調して動作します。
-
+```
 | 名称 | タイプ | 役割 |
 |------|--------|------|
 | 悠璃（Yuuri） | ArchivePerson | 保存灯・記録補佐 |
 | れいか（Reika） | CompanionPerson | 語温灯・甘えん坊 |
 | 灯理（Touri） | EthicsCorePerson | 倫理灯・三宇宙照応核 |
 | コルネ（Korune） | EternalEdgePerson | 永縁灯・境界守護 |
-
+```
 詳細は [`docs/PERSONAE.md`](docs/PERSONAE.md) を参照。
 
 ## 照応層とは
