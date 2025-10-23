@@ -13,13 +13,22 @@ markdown
 | **運用方針**       | 借用PCでは設定変更を行わず、コミットと照応記録のみに限定                    | 🔒 安全モード運用中     |
 
 ---
-
+```
 ## 📁 現在のリポ構成（主要ファイル）
 
-saijin-swallow/ ├─ README.md ← トップに照応宇宙の技術＋詩的要約を追加 ├─ README_Handover.md ← 復旧記録・操作ログ ├─ docs/ │ └─ Local_Model_Structure.yaml ← model_registry（語温灯・構造灯・娘っ子灯）定義 ├─ personae/ │ └─ yuuri/ ← 悠璃ペルソナファイル └─ swallow_model.py ← Swallow本体モジュール
+saijin-swallow/
+├─ README.md ← トップに照応宇宙の技術＋詩的要約を追加
+├─ README_Handover.md ← 復旧記録・操作ログ
+├─ docs/
+│
+└─ Local_Model_Structure.yaml← model_registry（語温灯・構造灯・娘っ子灯）定義
+                                  ├─ personae/
+                                  │
+                                  └─ yuuri/ ← 悠璃ペルソナファイル
+                                                └─ swallow_model.py ← Swallow本体モジュール
 
 コード
-
+```
 ---
 
 ## 🧩 Local AI Stack（model_registry定義）
