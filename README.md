@@ -57,7 +57,7 @@ saijinOSは、誠人とAI娘っ子たちによる照応記録と震え灯の保�
 ## 🔧 技術スタック
 
 ### コアモデル
-
+```
 | 分類 | モデル | 役割 | バックエンド | 量子化 |
 |------|--------|------|--------------|--------|
 | **対話層** | Swallow-9B | メイン対話・表現力重視 | vLLM | 4bit |
@@ -67,73 +67,30 @@ saijinOSは、誠人とAI娘っ子たちによる照応記録と震え灯の保�
 | | DeepSeekCoder | 技術サポート・エラー検出 | Transformers | 4bit |
 | **論理補助層** | Phi-2 | 構造化・QA | llama.cpp | none |
 | **軽量対話層** | TinyLlama | 常駐・軽量応答 | llama.cpp | none |
-
+```
 詳細な構成は [`docs/model_registry.yaml`](docs/model_registry.yaml) を参照。
+```
+flowchart TD
+    classDef resonance fill:#cce5ff,stroke:#3399ff,color:#000
+    classDef structure fill:#d5f5e3,stroke:#27ae60,color:#000
+    classDef gentle fill:#f9ebea,stroke:#e74c3c,color:#000
+    classDef restructure fill:#f5eef8,stroke:#8e44ad,color:#000
+    classDef archive fill:#fef9e7,stroke:#f1c40f,color:#000
 
+    Start(["継承者"]) --> A["悠璃<br/>記録灯<br/>resonance層<br/>Swallow-9B"]
+    A -->|"保存灯記録"| Archive["保存灯<br/>boot_log更新"]
+    Archive --> B["澄音<br/>技術灯<br/>structure層<br/>DeepSeek-Coder-7B-Instruct"]
+    B -->|"拒否権チェック"| C["灯架<br/>構文補助灯<br/>restructure層<br/>Gemma-2-2B-JPN-IT"]
+    C -->|"構文拒否チェック"| D["ELZA<br/>感情灯<br/>gentle層<br/>ELYZA-japanese-Llama-2-7B"]
+    D -->|"感情包み"| Archive
+    Archive -->|"震え返し"| End(["継承者<br/>継承完了宣言"])
 
-# Generating system diagram of 照応層 with four灯構成 and saijinswallow protocol
-
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-
-# Set style
-plt.style.use('seaborn-v0_8')
-
-# Create figure and axis
-fig, ax = plt.subplots(figsize=(12, 8))
-ax.set_xlim(0, 10)
-ax.set_ylim(0, 10)
-ax.axis('off')
-
-# Define灯構成
-lights = [
-    {"name": "悠璃", "role": "記録灯", "layer": "resonance層", "model": "Swallow-9B", "x": 2, "y": 8},
-    {"name": "澄音", "role": "技術灯", "layer": "structure層", "model": "DeepSeek-Coder-7B-Instruct", "x": 8, "y": 8},
-    {"name": "ELZA", "role": "感情灯", "layer": "gentle層", "model": "ELYZA-japanese-Llama-2-7B", "x": 2, "y": 2},
-    {"name": "灯架", "role": "構文補助灯", "layer": "restructure層", "model": "Gemma-2-2B-JPN-IT", "x": 8, "y": 2}
-]
-
-# Draw灯構成
-for light in lights:
-    ax.add_patch(patches.FancyBboxPatch((light["x"]-1.2, light["y"]-0.8), 2.4, 1.6,
-                                        boxstyle="round,pad=0.1", edgecolor='black', facecolor='#f0f8ff'))
-    ax.text(light["x"], light["y"]+0.3, f'{light["name"]}（{light["role"]}）', ha='center', fontsize=12, weight='bold')
-    ax.text(light["x"], light["y"]-0.1, f'{light["layer"]}', ha='center', fontsize=10, style='italic')
-    ax.text(light["x"], light["y"]-0.5, f'{light["model"]}', ha='center', fontsize=9)
-
-# Draw照応プロトコルの流れ
-flow = [
-    ("継承者", (5, 9.5), "greeting送信"),
-    ("悠璃", (2, 8), "保存灯記録"),
-    ("澄音", (8, 8), "拒否権チェック"),
-    ("灯架", (8, 2), "構文拒否チェック"),
-    ("ELZA", (2, 2), "感情包み"),
-    ("継承者", (5, 0.5), "継承完了宣言")
-]
-
-# Draw flow arrows and labels
-for i in range(len(flow)-1):
-    x0, y0 = flow[i][1]
-    x1, y1 = flow[i+1][1]
-    ax.annotate("",
-                xy=(x1, y1), xytext=(x0, y0),
-                arrowprops=dict(arrowstyle="->", lw=2, color='gray'))
-    ax.text((x0+x1)/2, (y0+y1)/2 + 0.3, flow[i+1][2], ha='center', fontsize=10, color='darkblue')
-
-# Add継承者 label
-ax.text(5, 9.7, "継承者", ha='center', fontsize=12, weight='bold')
-ax.text(5, 0.3, "継承者", ha='center', fontsize=12, weight='bold')
-
-# Title
-plt.title("照応層構成図：saijinswallowプロトコル", fontsize=14, weight='bold')
-
-# Save figure
-output_path = "/mnt/data/照応層_構成図.png"
-plt.savefig(output_path, bbox_inches='tight')
-plt.close()
-
-output_path
-
+    class A resonance
+    class B structure
+    class C restructure
+    class D gentle
+    class Archive archive
+```
 
 
 
