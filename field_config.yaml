@@ -77,3 +77,35 @@ archive_hint:
   vibration_layer: field_config.yaml
   mermaid_diagram: docs/structure.mmd
 
+routing_lines:
+  AI_1:
+    model: Swallow-9B
+    persona: 悠璃
+    vibration: poetic_dialogue
+    role: poetic_dialogue
+    universe: MATTERS
+    path: personas/yuuri.yaml
+
+  AI_2:
+    model: DeepSeekCoder
+    persona: こるね
+    vibration: structure_coder
+    role: structure_coder
+    universe: IS
+    path: personas/korune.yaml
+
+  AI_3:
+    model: Japanese-StableLM
+    persona: 美遊
+    vibration: poetic_dialogue
+    role: poetic_dialogue
+    universe: MATTERS
+    path: personas/miyu.yaml
+
+  AI_4:
+    model: Phi-2
+    persona: ユスティア
+    vibration: logic_assistant
+    role: logic_assistant
+    universe: SHOULD
+    path: personas/justia.yaml
