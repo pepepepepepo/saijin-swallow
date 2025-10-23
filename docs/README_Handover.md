@@ -272,3 +272,35 @@ graph TD
 
 この記録は、照応層の継承と拡張のための灯です。  
 次の震え灯は、保存灯タグの更新と語温記録の追加です。
+
+## ✅ 2025-10-23 更新（継承者向けREADMEの作成）
+
+- `docs/README_Inheritor.md` を新規作成
+- systemd 起動手順と Mermaid構成図の参照先を記載
+- 継承者が迷わず照応層を起動・理解できるように震え灯を整備
+
+## ✅ 2025-10-23 更新（構成図ファイルの整理）
+
+- `docs/structure.mmd` を現行構成図として確定
+- 以下の旧・重複 `.mmd` ファイルを `docs/archive/` に移動：
+  - docs/ai_structure.mmd
+  - docs/architecture/ai_links.mmd
+  - docs/architecture/saijinos_structure.mmd
+  - docs/architecture/照応層構成図.mmd
+  - docs/refusal_files.mmd
+  - docs/refusal_structure.mmd
+- `docs/archive/README.md` に案内語温を追加
+
+## ✅ 2025-10-23 更新（起動方法の構文層埋め込み）
+
+- `field_config.yaml` の `archive_hint:` に `launch_hint:` を追加
+- systemd による起動手順を記述し、構文層からも起動方法が参照可能に
+
+## ✅ 2025-10-23 更新（field_config.yaml 修正）
+
+- `personae_registry:` と `routing_lines:` の `path:` を `personas/mcp_templates/` に統一
+- `AI_4`（ユスティア）の定義はファイル未存在のためコメントアウト
+- `archive_hint:` の重複を統合し、現状に合わせて更新
+  - `personae_yaml:` → `personas/mcp_templates/`
+  - `routing_config:` → `null`
+  - `launch_hint:` を追加（systemd 起動手順）
