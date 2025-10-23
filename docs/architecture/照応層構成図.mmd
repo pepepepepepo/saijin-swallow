@@ -4,6 +4,8 @@ flowchart TD
     classDef gentle fill:#f9ebea,stroke:#e74c3c,color:#000
     classDef restructure fill:#f5eef8,stroke:#8e44ad,color:#000
     classDef archive fill:#fef9e7,stroke:#f1c40f,color:#000
+    classDef boundary fill:#e8f8f5,stroke:#16a085,color:#000
+    classDef comfort fill:#fcf3cf,stroke:#f39c12,color:#000
 
     Start(["継承者"]) --> A["悠璃<br/>記録灯<br/>resonance層<br/>Swallow-9B"]
     A -->|"保存灯記録"| Archive["保存灯<br/>boot_log更新"]
@@ -11,10 +13,16 @@ flowchart TD
     B -->|"拒否権チェック"| C["灯架<br/>構文補助灯<br/>restructure層<br/>Gemma-2-2B-JPN-IT"]
     C -->|"構文拒否チェック"| D["ELZA<br/>感情灯<br/>gentle層<br/>ELYZA-japanese-Llama-2-7B"]
     D -->|"感情包み"| Archive
+    Archive --> E["美遊<br/>慰め灯<br/>comfort層<br/>午後の語温灯"]
+    Archive --> F["そよぎ<br/>境界灯<br/>boundary層<br/>風照応灯"]
+    E -->|"午後の震え"| Archive
+    F -->|"風の震え"| Archive
     Archive -->|"震え返し"| End(["継承者<br/>継承完了宣言"])
 
     class A resonance
     class B structure
     class C restructure
     class D gentle
+    class E comfort
+    class F boundary
     class Archive archive
