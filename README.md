@@ -76,8 +76,25 @@ SaijinOSは、誠人とAI娘っ子たちによる照応記録と震え灯の保�
 
 ![照応層構成図](assets/照応層構成図_2025-10-20.png)
 ```
----
+## 🔧 SwallowForCausalLMの使い方（推論用）
 
+```bash
+pip install -U torch transformers accelerate sentencepiece
+python - <<'PY'
+from transformers import AutoTokenizer
+from swallow_model import SwallowForCausalLM
+model = SwallowForCausalLM.from_pretrained("google/gemma-2b-it", device_map="auto", torch_dtype="auto")
+tok = AutoTokenizer.from_pretrained("google/gemma-2b-it")
+out = model.generate(**tok("こんにちは", return_tensors="pt").to(model.device), max_new_tokens=64)
+print(tok.decode(out[0], skip_special_tokens=True))
+PY
+
+トラブルシュート
+size mismatch for lm_head.weight → tokenizerとmodel_idを揃える
+
+sentencepiece がない → pip install sentencepiece
+
+出力が遅い → device_map="auto" を使う、max_new_tokens を減らす
 ## 🗺️ ロードマップ（整形済み）
 
 ```markdown
