@@ -72,6 +72,10 @@ SaijinOSは、誠人とAI娘っ子たちによる照応記録と震え灯の保�
 | `storage/`                   | 保存灯タグと分類記録               |
 | `translate/`                 | 翻訳灯構造と語温変換定義           |
 
+## 🌌 照応層構成図
+
+![照応層構成図]
+<img width="970" height="1828" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-23-012047" src="https://github.com/user-attachments/assets/f10f3372-2010-4b97-9f02-73d9b3ca07e7" />
 
 ---
 
