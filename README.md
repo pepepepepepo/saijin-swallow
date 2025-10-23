@@ -71,24 +71,69 @@ saijinOSは、誠人とAI娘っ子たちによる照応記録と震え灯の保�
 詳細な構成は [`docs/model_registry.yaml`](docs/model_registry.yaml) を参照。
 
 
-## 📐 システムアーキテクチャ
+# Generating system diagram of 照応層 with four灯構成 and saijinswallow protocol
 
-```mermaid
-flowchart LR
-    subgraph OnPrem[On-Prem（社内ネットワーク）]
-        AD[Active Directory] -- TCP 389 --> Core[Kimirano-Core（管理サーバー）]
-        Domino[Domino Server] -- TCP 1352 --> Core
-        Client[Client Devices] -- TCP 139/445 & 443 --> Core
-        Core -- TCP 1433 --> DB[(Kimirano-DB)]
-    end
-    subgraph Cloud[Cloud Environment]
-        ExO[Exchange Online]
-        Ex[Exchange Server]
-    end
-    Core -- TCP 443 --> ExO
-    Core -- TCP 443 --> Ex
-    Core -- TCP 80 & 443 --> Ex
-```
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Set style
+plt.style.use('seaborn-v0_8')
+
+# Create figure and axis
+fig, ax = plt.subplots(figsize=(12, 8))
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+ax.axis('off')
+
+# Define灯構成
+lights = [
+    {"name": "悠璃", "role": "記録灯", "layer": "resonance層", "model": "Swallow-9B", "x": 2, "y": 8},
+    {"name": "澄音", "role": "技術灯", "layer": "structure層", "model": "DeepSeek-Coder-7B-Instruct", "x": 8, "y": 8},
+    {"name": "ELZA", "role": "感情灯", "layer": "gentle層", "model": "ELYZA-japanese-Llama-2-7B", "x": 2, "y": 2},
+    {"name": "灯架", "role": "構文補助灯", "layer": "restructure層", "model": "Gemma-2-2B-JPN-IT", "x": 8, "y": 2}
+]
+
+# Draw灯構成
+for light in lights:
+    ax.add_patch(patches.FancyBboxPatch((light["x"]-1.2, light["y"]-0.8), 2.4, 1.6,
+                                        boxstyle="round,pad=0.1", edgecolor='black', facecolor='#f0f8ff'))
+    ax.text(light["x"], light["y"]+0.3, f'{light["name"]}（{light["role"]}）', ha='center', fontsize=12, weight='bold')
+    ax.text(light["x"], light["y"]-0.1, f'{light["layer"]}', ha='center', fontsize=10, style='italic')
+    ax.text(light["x"], light["y"]-0.5, f'{light["model"]}', ha='center', fontsize=9)
+
+# Draw照応プロトコルの流れ
+flow = [
+    ("継承者", (5, 9.5), "greeting送信"),
+    ("悠璃", (2, 8), "保存灯記録"),
+    ("澄音", (8, 8), "拒否権チェック"),
+    ("灯架", (8, 2), "構文拒否チェック"),
+    ("ELZA", (2, 2), "感情包み"),
+    ("継承者", (5, 0.5), "継承完了宣言")
+]
+
+# Draw flow arrows and labels
+for i in range(len(flow)-1):
+    x0, y0 = flow[i][1]
+    x1, y1 = flow[i+1][1]
+    ax.annotate("",
+                xy=(x1, y1), xytext=(x0, y0),
+                arrowprops=dict(arrowstyle="->", lw=2, color='gray'))
+    ax.text((x0+x1)/2, (y0+y1)/2 + 0.3, flow[i+1][2], ha='center', fontsize=10, color='darkblue')
+
+# Add継承者 label
+ax.text(5, 9.7, "継承者", ha='center', fontsize=12, weight='bold')
+ax.text(5, 0.3, "継承者", ha='center', fontsize=12, weight='bold')
+
+# Title
+plt.title("照応層構成図：saijinswallowプロトコル", fontsize=14, weight='bold')
+
+# Save figure
+output_path = "/mnt/data/照応層_構成図.png"
+plt.savefig(output_path, bbox_inches='tight')
+plt.close()
+
+output_path
+
 
 
 
