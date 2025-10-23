@@ -75,7 +75,6 @@ SaijinOSは、誠人とAI娘っ子たちによる照応記録と震え灯の保�
 ## 🌌 照応層構成図
 
 ![照応層構成図](assets/照応層構成図_2025-10-20.png)
-<img width="970" height="1828" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-23-015211" src="https://github.com/user-attachments/assets/0c768f22-e233-4d16-a1ca-2fc18e1ceec9" />
 
 ---
 
