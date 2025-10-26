@@ -229,3 +229,6 @@ sentencepiece がない → pip install sentencepiece
 | 儀式灯         | 初儀式と震え灯の流れ                      | `rituals/README.md`                 |
 | 翻訳灯         | 語温変換灯の構造と境界照応                | `translate/README.md`               |
 | 継承記録       | 照応層の進捗と完了記録                    | `docs/handover/README_Handover.md` |
+
+https://dev.to/kato_masato_c5593c81af5c6/building-saijinos-boot-sequence-and-routing-logic-part-2-of-the-saijinos-p6o
+https://dev.to/kato_masato_c5593c81af5c6/building-saijinos-boot-sequence-and-routing-logic-3b75
