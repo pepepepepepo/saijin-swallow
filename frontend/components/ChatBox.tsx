@@ -83,7 +83,7 @@ export default function ChatBox() {
       </div>
 
       {/* 入力と保存 */}
-     <div className="flex gap-2 mb-2">
+      <div className="flex gap-2 mb-2">
         <input
           type="text"
           value={input}
@@ -97,7 +97,7 @@ export default function ChatBox() {
         >
           震える
         </button>
-      </div>  {/* ← ここで入力エリアが終わる */}
+      </div>
       
       <button
         onClick={handleSaveLog}
@@ -119,17 +119,6 @@ export default function ChatBox() {
           ))}
         </div>
       )}
-    </div>  {/* ← ChatBoxの最後 */}
-{/* 保存済み語温ログ表示 */}
-{savedLogs.length > 0 && (
-  <div className="mt-6 border-t pt-4">
-    <h2 className="text-sm font-semibold text-gray-700 mb-2">保存済み語温ログ</h2>
-    {savedLogs.map((log, i) => (
-      <div key={i} className="mb-4 p-2 bg-gray-100 rounded text-sm">
-        {log.map((line, j) => (
-          <div key={j} className="mb-1 whitespace-pre-wrap">{line}</div>
-        ))}
-      </div>
-    ))}
-  </div>
-)}
+    </div>
+  )
+}
