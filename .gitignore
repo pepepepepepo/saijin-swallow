@@ -1,16 +1,32 @@
 ﻿# 仮想環境・WSL生成物
 .venv/
-saijjin-env/
-
-# モデル・データはGitに入れない
-models/
-data/
+saijin-env/
+F:/swallow_models/
+models/data/
+*.pyc
+__pycache__/
+bin/
+lib64/
+models/**/lib64/
+swallow_models/
 
 # キャッシュ・生成物
-__pycache__/
 *.log
 *.sqlite3
 *.exe
 *.msi
 *.zip
 *.whl
+
+# 重量ファイル除外
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+*.png
+*.jpg
+*.mp4
+*.wav
+*.zip
+swallow-9b/
+git-vision/
