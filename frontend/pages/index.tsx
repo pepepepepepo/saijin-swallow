@@ -4,6 +4,7 @@ import Head from 'next/head'
 import ChatBox from '../components/ChatBox'
 import LivePreview from '../components/LivePreview'
 import Link from 'next/link'
+import ThemeSwitcher from '../components/ThemeSwitcher'
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
         <title>SaijinSwallow Frontend</title>
         <meta name="description" content="照応層の語温UIとコード即表示" />
       </Head>
-      <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-8">
+      <main className="flex flex-col items-center justify-center min-h-screen p-8">
+         <ThemeSwitcher />
         {/* 照応マップナビ */}
         <nav className="w-full max-w-xl mb-6">
           <ul className="flex flex-wrap justify-center gap-4 text-sm text-indigo-700">
