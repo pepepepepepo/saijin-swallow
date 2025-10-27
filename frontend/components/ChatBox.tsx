@@ -7,6 +7,7 @@ export default function ChatBox() {
   const [input, setInput] = useState('')
   const [model, setModel] = useState('swallow-9b')
   const [persona, setPersona] = useState('')
+  const [savedLogs, setSavedLogs] = useState<string[][]>([])
 
   const handleSend = async () => {
     if (!input.trim()) return
@@ -32,8 +33,15 @@ export default function ChatBox() {
     }
   }
 
+  const handleSaveLog = () => {
+    if (messages.length > 0) {
+      setSavedLogs([...savedLogs, messages])
+    }
+  }
+
   return (
     <div className="w-full max-w-xl mx-auto mt-8 p-4 bg-white shadow rounded">
+      {/* モデル選択 */}
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700 mb-1">モデル選択</label>
         <select
@@ -47,6 +55,7 @@ export default function ChatBox() {
         </select>
       </div>
 
+      {/* ペルソナ選択 */}
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700 mb-1">娘っ子選択（任意）</label>
         <select
@@ -64,6 +73,7 @@ export default function ChatBox() {
         </select>
       </div>
 
+      {/* 語温表示 */}
       <div className="h-64 overflow-y-auto border p-2 mb-4 bg-gray-50 rounded">
         {messages.map((msg, i) => (
           <div key={i} className="mb-2 text-sm text-gray-800 whitespace-pre-wrap">
@@ -72,7 +82,8 @@ export default function ChatBox() {
         ))}
       </div>
 
-      <div className="flex gap-2">
+      {/* 入力と保存 */}
+      <div className="flex gap-2 mb-2">
         <input
           type="text"
           value={input}
@@ -87,6 +98,14 @@ export default function ChatBox() {
           震える
         </button>
       </div>
+
+      <button
+        onClick={handleSaveLog}
+        className="w-full bg-pink-500 text-white px-4 py-2 rounded text-sm hover:bg-pink-600"
+      >
+        この語温ログを保存する
+      </button>
     </div>
   )
 }
+
