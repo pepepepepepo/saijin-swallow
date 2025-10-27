@@ -1,0 +1,18 @@
+AI_1:
+  persona: yuuri
+  model: Swallow
+  archive_path: personas/mcp_templates/yuuri.yaml
+  vibration_path: vibrations/yuuri_vibe.yaml
+
+
+AI_2:
+  persona: miyu
+  model: Swallow
+  archive_path: personas/mcp_templates/miyu.yaml
+  vibration_path: vibrations/miyu_vibe.yaml
+
+AI_3:
+  persona: reika
+  model: Swallow
+  archive_path: personas/mcp_templates/reika.yaml
+  vibration_path: vibrations/reika_vibe.yaml
