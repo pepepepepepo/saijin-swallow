@@ -9,6 +9,15 @@ export default function ChatBox() {
   const [persona, setPersona] = useState('')
   const [savedLogs, setSavedLogs] = useState<string[][]>([])
 
+  import { saveLogToYAML } from '../utils/saveLog'
+
+const handleSaveLog = () => {
+  if (messages.length > 0) {
+    setSavedLogs([...savedLogs, messages])
+    saveLogToYAML(messages, persona)
+  }
+}
+
   const handleSend = async () => {
     if (!input.trim()) return
     const userMessage = input.trim()
