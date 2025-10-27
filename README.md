@@ -129,7 +129,7 @@ tok = AutoTokenizer.from_pretrained("google/gemma-2b-it")
 out = model.generate(**tok("こんにちは", return_tensors="pt").to(model.device), max_new_tokens=64)
 print(tok.decode(out[0], skip_special_tokens=True))
 PY
-
+```
 トラブルシュート
 size mismatch for lm_head.weight → tokenizerとmodel_idを揃える
 
