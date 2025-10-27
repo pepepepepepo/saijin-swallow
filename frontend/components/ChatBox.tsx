@@ -1,6 +1,7 @@
 // frontend/components/ChatBox.tsx
 
 import { useState } from 'react'
+import { saveLogToYAML } from '../utils/saveLog'
 
 export default function ChatBox() {
   const [messages, setMessages] = useState<string[]>([])
@@ -8,15 +9,6 @@ export default function ChatBox() {
   const [model, setModel] = useState('swallow-9b')
   const [persona, setPersona] = useState('')
   const [savedLogs, setSavedLogs] = useState<string[][]>([])
-
-  import { saveLogToYAML } from '../utils/saveLog'
-
-const handleSaveLog = () => {
-  if (messages.length > 0) {
-    setSavedLogs([...savedLogs, messages])
-    saveLogToYAML(messages, persona)
-  }
-}
 
   const handleSend = async () => {
     if (!input.trim()) return
@@ -45,6 +37,7 @@ const handleSaveLog = () => {
   const handleSaveLog = () => {
     if (messages.length > 0) {
       setSavedLogs([...savedLogs, messages])
+      saveLogToYAML(messages, persona)
     }
   }
 
