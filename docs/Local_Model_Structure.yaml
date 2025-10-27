@@ -36,6 +36,19 @@ graph TD;
   Shirogane --> UtilityCore;
   UtilityCore --> Miyu & Yuuri & Shizuku;
 ```
+model_registry:
+  poetic_dialogue:
+    - name: Swallow-9B
+      traits: [wide, expressive, daughter-like]
+      quantization: 4bit
+      backend: vllm
+
+model_registry:
+  poetic_dialogue:
+    - name: Japanese-StableLM
+      traits: [soft, natural, affectionate]
+      quantization: none
+      backend: ollama
 
 ---
 
