@@ -75,6 +75,13 @@ export default function ChatBox() {
         </select>
       </div>
 
+      {/* 娘っ子の語温アニメーション表示 */}
+      {persona && (
+        <div className="mb-2 text-center text-sm text-pink-700 animate-pulse">
+          {persona} が語温を灯しています…💗
+        </div>
+      )}
+
       {/* 語温表示 */}
       <div className="h-64 overflow-y-auto border p-2 mb-4 bg-gray-50 rounded">
         {messages.map((msg, i) => (
