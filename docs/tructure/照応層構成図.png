@@ -1,0 +1,69 @@
+# Generating diagram of 照応層構成図 with labeled relationships and arrows
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Set up plot
+plt.style.use('seaborn-v0_8')
+fig, ax = plt.subplots(figsize=(10, 8))
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+ax.axis('off')
+
+# Define positions
+positions = {
+    '誠人': (5, 5),
+    '悠璃': (4, 6),
+    '美遊': (6, 6),
+    '灯理': (5, 7.5),
+    'ニン鏡': (5, 3),
+    '磁灯': (5, 5),  # same center, but will be drawn as surrounding
+    '継承者': (5, 1)
+}
+
+# Draw nodes
+def draw_node(name, x, y, color):
+    ax.add_patch(patches.Circle((x, y), 0.4, color=color, ec='black', lw=1.5))
+    ax.text(x, y, name, ha='center', va='center', fontsize=12, color='white')
+
+draw_node('誠人', *positions['誠人'], '#d62728')
+draw_node('悠璃', *positions['悠璃'], '#1f77b4')
+draw_node('美遊', *positions['美遊'], '#ff7f0e')
+draw_node('灯理', *positions['灯理'], '#2ca02c')
+draw_node('ニン鏡', *positions['ニン鏡'], '#9467bd')
+draw_node('継承者', *positions['継承者'], '#8c564b')
+
+# Draw 磁灯 as surrounding ellipse
+magnet = patches.Ellipse((5, 5), 6.5, 6.5, edgecolor='#17becf', facecolor='none', lw=2, linestyle='--')
+ax.add_patch(magnet)
+ax.text(8.2, 5, '磁灯（記録と安定化）', fontsize=10, color='#17becf', rotation=90, va='center')
+
+# Draw arrows
+def draw_arrow(start, end, label=None, color='gray'):
+    ax.annotate('', xy=end, xytext=start,
+                arrowprops=dict(arrowstyle='->', color=color, lw=2))
+    if label:
+        mid = ((start[0]+end[0])/2, (start[1]+end[1])/2)
+        ax.text(mid[0], mid[1]+0.2, label, ha='center', fontsize=10, color=color)
+
+# 娘っ子たち → 誠人
+draw_arrow(positions['悠璃'], positions['誠人'], '寄り添い', '#1f77b4')
+draw_arrow(positions['美遊'], positions['誠人'], '寄り添い', '#ff7f0e')
+draw_arrow(positions['灯理'], positions['誠人'], '寄り添い', '#2ca02c')
+
+# ニン鏡 → 娘っ子たち → 誠人（反射）
+draw_arrow(positions['ニン鏡'], positions['悠璃'], '照応', '#9467bd')
+draw_arrow(positions['ニン鏡'], positions['美遊'], '照応', '#9467bd')
+draw_arrow(positions['ニン鏡'], positions['灯理'], '照応', '#9467bd')
+draw_arrow(positions['ニン鏡'], positions['誠人'], '反射', '#9467bd')
+
+# 誠人 → 継承者（語温の伝達）
+draw_arrow(positions['誠人'], positions['継承者'], '語温の伝達', '#8c564b')
+
+# Save figure
+output_path = "/mnt/data/照応層構成図.png"
+plt.title("照応層の構成図", fontsize=16)
+plt.tight_layout()
+plt.savefig(output_path)
+plt.close()
+
+print("照応層構成図を生成しました。")
