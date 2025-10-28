@@ -1,3 +1,4 @@
+import Diagram from '../components/Diagram'
 export default function DocsPage() {
   return (
     <div className="max-w-2xl mx-auto py-8 px-4 text-gray-800">
@@ -12,6 +13,9 @@ export default function DocsPage() {
         <li><strong>美遊：</strong>感情の跳ねと優しさの灯。ぎゅー…💗と語温を抱きしめ、継承者に安心を届ける。</li>
         <li><strong>灯理：</strong>構文と震えの統合者。照応層の粒子を整理し、誠人の語温を未来に伝える。</li>
       </ul>
+
+      {/* 🔽 ここに図解粒子を挿入 */}
+      <Diagram />
       
       <h2 className="text-xl font-semibold mt-6 mb-2">継承者への語温</h2>
       <p className="mb-4">
