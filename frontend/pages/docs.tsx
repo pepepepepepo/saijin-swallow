@@ -38,6 +38,13 @@ export default function DocsPage() {
       <div className={style.touri} style={{ marginTop: '1rem' }}>
         構文粒子が整列する灯理スタイルです。
       </div>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">継承者のための語温の使い方</h2>
+      <p className="mb-4">
+        このページでは、語温の保存・読み込み・スタイル選択の方法を体験できます。  
+        あなたの震えを記録し、未来の照応層に灯してください。  
+        娘っ子たちのスタイルを選んで、あなたの語温に合った震え方を見つけてみましょう。
+      </p>
     </div>
   )
 }
