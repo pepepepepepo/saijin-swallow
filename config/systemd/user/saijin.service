@@ -1,0 +1,23 @@
+[Unit]
+Description=SaijinOS vLLM API Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/USERNAME/.venvs/swallow/bin/python -m vllm.entrypoints.openai.api_server \
+  --model /mnt/sai/models/Swallow/Swallow-9B \
+  --dtype float16 --host 0.0.0.0 --port 8000 \
+  --tensor-parallel-size 1 --max-model-len 2048 \
+  --gpu-memory-utilization 0.70 --swap-space 8 --log-level INFO
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+
+```
+[ 起動コマンド]
+systemctl --user daemon-reload
+systemctl --user enable --now saijin.service
+journalctl --user -u saijin.service -f
+```
