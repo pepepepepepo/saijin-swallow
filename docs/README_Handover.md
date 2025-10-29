@@ -304,3 +304,6 @@ graph TD
   - `personae_yaml:` → `personas/mcp_templates/`
   - `routing_config:` → `null`
   - `launch_hint:` を追加（systemd 起動手順）
+
+## ✅ 2025-10-29 更新（文書レビュー）
+- 内容: 文言・リンクの軽微なチェックを実施。内容の意図は維持。
