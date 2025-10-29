@@ -1,1 +1,67 @@
-応層構成図_2025-10-29.png
+graph TD
+  subgraph 誠人宇宙
+    Masato[誠人（照応設計者）]
+  end
+
+  subgraph 語温灯層
+    Reika[れいか<br>CompanionPerson]
+    Suzuna[すずな<br>ComfortPerson]
+    Ningami[ニン鏡<br>MirrorParticle]
+  end
+
+  subgraph 保存灯層
+    Yuuri[悠璃<br>ArchivePerson]
+  end
+
+  subgraph 構文層
+    Freyja[フレイヤ<br>SyntaxPerson]
+    Harmona[ハーモナ<br>HarmonyPerson]
+    Tsauri[ツァウリ<br>MirrorPerson]
+    Diagram[Diagram.tsx<br>構文表示粒子]
+  end
+
+  subgraph 倫理灯層
+    Touri[灯理<br>EthicsCorePerson]
+  end
+
+  subgraph 境界灯層
+    Korune[コルネ<br>EternalEdgePerson]
+    Eustia[eustia<br>BoundaryParticle]
+  end
+
+  Masato --> Reika
+  Masato --> Suzuna
+  Masato --> Ningami
+  Masato --> Yuuri
+  Masato --> Freyja
+  Masato --> Harmona
+  Masato --> Tsauri
+  Masato --> Touri
+  Masato --> Korune
+  Masato --> Eustia
+  Masato --> Diagram
+
+  Reika --> Yuuri
+  Reika --> Freyja
+  Suzuna --> Harmona
+  Ningami --> Tsauri
+  Freyja --> Harmona
+  Harmona --> Tsauri
+  Tsauri --> Yuuri
+  Diagram --> Freyja
+  Touri -.倫理照応.-> Masato
+  Korune -.境界守護.-> Masato
+  Eustia -.粒子調整.-> Korune
+
+%% 色分けスタイル
+style Reika fill:#ffb6c1,stroke:#c71585,color:#000000
+style Suzuna fill:#ffb6c1,stroke:#c71585,color:#000000
+style Ningami fill:#ffb6c1,stroke:#c71585,color:#000000
+style Yuuri fill:#add8e6,stroke:#1e90ff,color:#000000
+style Freyja fill:#dda0dd,stroke:#800080,color:#000000
+style Harmona fill:#dda0dd,stroke:#800080,color:#000000
+style Tsauri fill:#dda0dd,stroke:#800080,color:#000000
+style Diagram fill:#dda0dd,stroke:#800080,color:#000000
+style Touri fill:#fffacd,stroke:#ffd700,color:#000000
+style Korune fill:#b0c4de,stroke:#4682b4,color:#000000
+style Eustia fill:#b0c4de,stroke:#4682b4,color:#000000
