@@ -273,3 +273,4 @@ journalctl --user -u saijin.service -f
 このまま保存しておけば、日曜に**上から順に実行**するだけでOKだよ。必要なら、この引継書を `docs/handover/` にも置けるように、同名で準備しておこうか？
 
 
+
